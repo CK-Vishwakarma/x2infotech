@@ -1,0 +1,426 @@
+.home {
+  width: 100%;
+
+  .hero-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    text-align: center;
+    flex-wrap: wrap;
+    .col-2 {
+      flex-basis: 50%;
+      margin: 2rem 0;
+      min-width: 30rem;
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+      p {
+        font-size: $fs-sm;
+        margin-bottom: 0.5rem;
+      }
+
+      h2 {
+        margin-bottom: 2rem;
+      }
+    }
+    @include breakpoint-up(medium) {
+      text-align: left;
+      .col-2 {
+        padding: 0 2rem;
+
+        h1 {
+          font-size: 2.5rem;
+        }
+      }
+    }
+    @include breakpoint-up(large) {
+      text-align: left;
+      .col-2 {
+        padding: 0 2rem;
+
+        h1 {
+          font-size: 4rem;
+        }
+        button {
+          margin-top: 10rem;
+          padding: 1.2rem 5rem;
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+
+  .why-us {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: $BGSecondary;
+
+    .cards {
+      margin: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+
+      gap: 2rem 0;
+      hr {
+        border: 0.1rem solid $mainGreen;
+      }
+      .single-card {
+        padding: 3rem 0 5rem 0;
+        background-color: #fff;
+        border-radius: 1rem;
+        .card-icon {
+          font-size: 3rem;
+          color: $mainGreen;
+        }
+        h1 {
+          font-size: 2rem;
+        }
+        p {
+          font-size: 1.5rem;
+          padding: 0 1rem;
+        }
+      }
+    }
+    @include breakpoint-up(medium) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      p {
+        margin: 0 auto;
+        max-width: 80%;
+      }
+      .cards {
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: row;
+        .single-card {
+          flex-basis: 31%;
+          h1 {
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+    @include breakpoint-up(large) {
+      h1 {
+        font-size: 4rem;
+      }
+      hr {
+        margin-bottom: 3rem;
+      }
+      p {
+        margin-bottom: 5rem;
+      }
+      .cards {
+        .single-card {
+          flex-basis: 30%;
+          justify-content: space-evenly;
+        }
+      }
+    }
+  }
+
+  .our-services {
+    text-align: center;
+    padding: 2rem 1rem;
+
+    .cards-services {
+      margin: 2rem 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2rem 0;
+      .card {
+        background-color: white;
+        padding: 5rem 0;
+        border-radius: 1rem;
+        box-shadow: 0 0 0.3rem rgba($color: #000000, $alpha: 0.2);
+        h1 {
+          font-size: 2rem;
+          font-weight: 500;
+        }
+      }
+    }
+    @include breakpoint-up(medium) {
+      .cards-services {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        .card {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 3rem;
+          flex-basis: 45%;
+        }
+      }
+    }
+    @include breakpoint-up(large) {
+      hr {
+        margin-bottom: 2rem;
+      }
+      p {
+        margin-bottom: 3rem;
+      }
+      .cards-services {
+        .card {
+          flex-basis: 30%;
+        }
+      }
+    }
+  }
+  .our-objective {
+    background-color: $BGSecondary;
+    padding-bottom: 5rem;
+    margin: 5rem 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    .img-container {
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+    .text-section {
+      p {
+        margin-bottom: 1rem;
+      }
+      h3 {
+        font-weight: 500;
+      }
+    }
+
+    @include breakpoint-up(medium) {
+      width: 100%;
+      .img-container {
+        width: 100%;
+        img {
+          width: 50%;
+        }
+      }
+    }
+    @include breakpoint-up(large) {
+      width: 100%;
+      height: 100%;
+      padding: 2rem 3rem;
+
+      .img-container {
+        text-align: center;
+        width: 50%;
+      }
+      .text-section {
+        width: 50%;
+
+        p {
+          max-width: 60%;
+        }
+      }
+    }
+  }
+  .employees {
+    text-align: center;
+    padding: 2rem 0;
+    h1 {
+      padding: 0 1.5rem;
+    }
+    p {
+      text-align: center;
+      padding: 2rem 3rem;
+      margin-bottom: 2rem;
+    }
+    .employees-avatar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem 0;
+      .img-holder {
+        width: 20rem;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          width: 15rem;
+          height: 15rem;
+          border-radius: 50%;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: $mainGreen;
+          z-index: -1;
+        }
+        img {
+          width: 80%;
+          object-fit: contain;
+        }
+      }
+    }
+    @include breakpoint-up(large) {
+      padding: 3rem 5rem;
+      .employees-avatar {
+        gap: 5rem;
+      }
+    }
+  }
+
+  .pricing {
+    background-color: $BGSecondary;
+    padding: 3rem 0;
+    text-align: center;
+    margin-bottom: 5rem;
+    padding-bottom: 5rem;
+    hr {
+      border: 0.1rem solid $mainGreen;
+    }
+    .pricing-heading {
+      margin-bottom: 2rem;
+      padding: 1rem 3rem;
+    }
+
+    .pricing-cards {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+
+      .single-card {
+        padding: 5rem;
+        background-color: white;
+        position: relative;
+        border-radius: 1rem;
+        max-width: 30rem;
+        h2 {
+        }
+        h1 {
+          span {
+            font-size: 2rem;
+          }
+        }
+        .monthly {
+          margin-bottom: 1rem;
+        }
+        .card-striked-text {
+          margin-bottom: 3rem;
+        }
+
+        &.active {
+          overflow: hidden;
+          background-color: #e9edf0;
+
+          &::after {
+            position: absolute;
+            content: "POPULAR";
+            top: 1.5rem;
+            left: -3.5rem;
+            z-index: 5;
+            background-color: $mainGreen;
+            color: white;
+            padding: 0.5rem 3rem;
+            transform: rotate(-45deg);
+
+            font-size: $fs-med;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+  .reviews {
+    text-align: center;
+    margin: 3rem 0;
+    margin-bottom: 5rem;
+
+    .review-flex {
+      gap: 3rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 5rem;
+      .card {
+        max-width: 100%;
+        padding: 5rem;
+        background-color: white;
+        border-radius: 1rem;
+        h1 {
+          color: $mainGreen;
+        }
+        p {
+          padding: 1rem;
+        }
+
+        .rating {
+          color: $mainGreen;
+          padding: 1rem;
+          span {
+            margin: 0.2rem;
+          }
+        }
+        .avatar {
+          max-width: 20rem;
+          padding: 2rem;
+          margin: 0 auto;
+
+          img {
+            width: 90%;
+            object-fit: contain;
+          }
+        }
+        h3 {
+          font-weight: 500;
+        }
+      }
+    }
+    @include breakpoint-up(large) {
+      .review-flex {
+        .card {
+          max-width: 30%;
+        }
+      }
+    }
+  }
+  .client-carousels {
+    background-color: $BGSecondary;
+    padding: 2rem 0;
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      text-align: center;
+    }
+    hr {
+      margin-bottom: 5rem;
+    }
+
+    .clients {
+      width: 100%;
+      display: grid;
+      place-items: center;
+      grid-template-columns: repeat(auto-fit, minMax(160px, 1fr));
+      // overflow: scroll;
+
+      .client {
+        display: grid;
+        place-items: center;
+        padding: 2rem;
+        // width: 12.5rem;
+        transition: $tran300ms;
+        filter: grayscale(100%);
+        img {
+          width: 100%;
+          object-fit: contain;
+        }
+
+        &:hover {
+          filter: grayscale(0);
+        }
+      }
+    }
+  }
+}

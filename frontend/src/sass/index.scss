@@ -1,0 +1,20 @@
+@import "./variables";
+@import "./mixins";
+@import "./globals";
+
+@import "../pages/header/header";
+@import "../pages/header/mainNavbar";
+@import "../pages/header/secondaryNav";
+
+@import "../pages/main/main";
+@import "../pages/main/home";
+@import "../pages/main/login";
+@import "../pages/main/registration";
+@import "../pages/main/portfolio";
+@import "../pages/main/services";
+@import "../pages/main/about";
+@import "../pages/main/career";
+@import "../pages/main/contact";
+@import "../pages/main/errorPage";
+
+@import "../pages/footer/footer";

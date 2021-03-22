@@ -1,0 +1,67 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
+const Footer = () => {
+  return (
+    <div className="footers">
+      <div className="container-full">
+        <div className="container">
+          <div className="footer-layout">
+            <div className="col-4">
+              <img src="/images/logo.png" alt="logo" />
+              <p>X2 is a Platform where you can grow your Business further</p>
+            </div>
+            <div className="col-4">
+              <h1>SERVICES</h1>
+              <ul>
+                <li>
+                  <Link>Design and Development</Link>
+                </li>
+                <li>
+                  <Link>Digital Marketing</Link>
+                </li>
+                <li>
+                  <Link>Graphics Design</Link>
+                </li>
+              </ul>
+            </div>
+            <div className="col-4">
+              <h1>QUICK LINKS</h1>
+              <ul>
+                <li>
+                  <Link>About Us</Link>
+                </li>
+
+                <li>
+                  <Link>Portfolio</Link>
+                </li>
+              </ul>
+            </div>
+            <div className="col-4">
+              <h1>CONTACT US</h1>
+              <ul>
+                <li>
+                  <Link>info@x2infotech.com</Link>
+                </li>
+
+                <li>
+                  <Link>hr@x2infotech.com</Link>
+                </li>
+              </ul>
+              <div className="contact-1">
+                <h3>HR Related Query</h3>
+                <p>+91 7000026259</p>
+              </div>
+              <div className="contact-1">
+                <h3>IT Related Query</h3>
+                <p>+91 7999319552</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Footer;

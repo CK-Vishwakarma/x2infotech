@@ -1,0 +1,191 @@
+// Default settings
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", "Montserrat", sans-serif, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: $fs-def;
+  color: $SubHeading;
+  font-weight: 300;
+  line-height: 1.3;
+  height: 100vh;
+  background-color: $BGPrimary;
+}
+hr {
+  margin: 0 auto;
+  width: 25%;
+  border: 2px solid $mainGreen;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  color: $Heading;
+  font-weight: 600;
+  font-size: 2.5rem;
+
+  @include breakpoint-up(medium) {
+    font-size: 3.5rem;
+    font-weight: 700;
+  }
+  @include breakpoint-up(large) {
+    font-size: 4rem;
+    font-weight: 800;
+  }
+}
+h2 {
+  font-size: 1.8rem;
+
+  margin-bottom: 1rem;
+  font-weight: 300;
+  color: $otherSubHeading;
+
+  @include breakpoint-up(medium) {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+}
+p {
+  color: $SubHeading;
+}
+
+.container-full {
+  max-width: 144rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.container {
+  max-width: 124rem;
+  height: 100%;
+  width: 95%;
+  margin: 0 auto;
+
+  @include breakpoint-up(medium) {
+    width: 90%;
+  }
+  // @include breakpoint-down(medium) {
+  //   width: 95%;
+  // }
+}
+
+.mx-auto {
+  margin: 0 auto;
+}
+
+a,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+#root {
+  height: 100%;
+}
+
+.grid-container {
+  margin: 0 auto;
+  max-width: 192rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas: "infobar" "headers" "main" "footers";
+  height: 100%;
+}
+.infobar {
+  grid-area: infobar;
+}
+.headers {
+  grid-area: headers;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footers {
+  grid-area: footers;
+}
+
+// displays shortcuts
+
+.flexBox {
+  display: flex;
+  align-items: center;
+
+  &.jcc {
+    justify-content: center;
+  }
+
+  &.jcspb {
+    justify-content: space-between;
+  }
+}
+
+.gridBox {
+  display: grid;
+  place-items: center;
+}
+
+.btn {
+  background: $mainGreen;
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 1rem;
+  font-weight: 500;
+  font-family: "Montserrat", "Poppins";
+  min-width: 13rem;
+  text-align: center;
+  user-select: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 1px 5px rgba($color: #000000, $alpha: 0.3);
+}
+
+.hide-on-mobile {
+  @include breakpoint-down(small) {
+    display: none;
+  }
+}
+
+.hide-on-tablet {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+.hide-on-desktop {
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}
+
+// .col-1 {
+//   flex-basis: 80%;
+// }
+// .col-2 {
+//   flex-basis: 50%;
+// }
+// .col-3 {
+//   flex-basis: 33%;
+// }
+// .col-4 {
+//   flex-basis: 25%;
+// }

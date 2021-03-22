@@ -1,0 +1,160 @@
+.main-navbar {
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 01rem;
+  height: 7rem;
+
+  .logo-section {
+    img {
+      width: 10rem;
+      object-fit: contain;
+    }
+  }
+
+  .menu-section {
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 0 2rem;
+      text-transform: capitalize;
+      font-family: "Poppins", "Montserrat";
+      li {
+        position: relative;
+        a {
+          color: $SubHeading;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          display: block;
+          top: 3rem;
+          left: 0;
+          width: 0%;
+          height: 0.35rem;
+          z-index: 1000;
+          background: $LG-green;
+          opacity: 0;
+          transition: $tran200ms;
+        }
+
+        &:hover {
+          &::after {
+            opacity: 1;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .cta {
+    background: $LG-green;
+    transition: $tran300ms;
+
+    &:hover {
+      background: $LG-Rgreen;
+    }
+  }
+  .burger-container {
+    .mobile-menu-btn {
+      cursor: pointer;
+      & > span {
+        display: block;
+        width: 3rem;
+        height: 0.3rem;
+        background-color: $mainGreen;
+        transform-origin: 0.4rem 0.15rem;
+        transition: $tran300ms;
+        &:not(:last-child) {
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      &.open {
+        > span:first-child {
+          transform: rotate(45deg);
+        }
+
+        > span:nth-child(2) {
+          opacity: 0;
+        }
+
+        > span:last-child {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  .sidebar-menu {
+    position: absolute;
+    top: 7rem;
+    left: 0rem;
+    margin: 1rem 0;
+    border-radius: 0 0 1rem 1rem;
+    width: 100%;
+    background-color: white;
+    height: fit-content;
+    z-index: 1000;
+    transition: $tran300ms;
+    opacity: 0;
+    transform: translateX(-100%);
+
+    ul {
+      padding: 3rem 0;
+      li {
+        padding: 1rem 3rem;
+        margin: 0.5rem 0;
+        border-left: 0rem solid $Green;
+        transition: $tran300ms;
+
+        &:not(:last-child) {
+          border-bottom: 0.2rem solid $mainGreen;
+        }
+        &:hover {
+          background-color: $BGSecondary;
+          border-left: 1rem solid $Green;
+        }
+        a {
+          display: flex;
+          align-items: center;
+          span {
+            display: grid;
+            place-items: center;
+            margin: 0 0.4rem;
+          }
+          text-transform: uppercase;
+          font-weight: 400;
+          color: $SubHeading;
+        }
+      }
+    }
+
+    &.open {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .overlay {
+    position: fixed;
+
+    top: 7rem;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    // background-color: rgba(0, 0, 0, 0.425);
+    background-color: black;
+    opacity: 0;
+    z-index: 900;
+    transition: $tran200ms;
+    visibility: hidden;
+    &.open {
+      opacity: 0.5;
+      visibility: visible;
+    }
+  }
+}

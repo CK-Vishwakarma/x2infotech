@@ -1,0 +1,53 @@
+.footers {
+  background-color: #ffffff;
+  padding: 4rem 2rem;
+  .footer-layout {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    h1 {
+      font-size: 2.5rem;
+    }
+    img {
+      width: 12.5rem;
+      object-fit: contain;
+    }
+    .col-4 {
+      flex-basis: 25%;
+      padding: 0 1rem;
+    }
+
+    ul {
+      li {
+        margin: 1.5rem 0;
+
+        a {
+          color: $SubHeading;
+        }
+      }
+    }
+    h3 {
+      color: $Heading;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-1 {
+      margin-bottom: 1rem;
+    }
+
+    @include breakpoint-down(medium) {
+      .col-4 {
+        flex-basis: 50%;
+      }
+    }
+    @include breakpoint-down(small) {
+      justify-content: center;
+      gap: 2rem 0;
+      text-align: center;
+      .col-4 {
+        flex-basis: 100%;
+      }
+    }
+  }
+}
