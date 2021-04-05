@@ -1,4 +1,5 @@
 // Default settings
+
 *,
 *::after,
 *::before {
@@ -23,6 +24,7 @@ body {
   line-height: 1.3;
   height: 100vh;
   background-color: $BGPrimary;
+  letter-spacing: 0.5px;
 }
 hr {
   margin: 0 auto;
@@ -137,6 +139,9 @@ ul {
   &.jcspb {
     justify-content: space-between;
   }
+  &.fdc {
+    flex-direction: column;
+  }
 }
 
 .gridBox {
@@ -177,15 +182,31 @@ ul {
   }
 }
 
-// .col-1 {
-//   flex-basis: 80%;
-// }
-// .col-2 {
-//   flex-basis: 50%;
-// }
-// .col-3 {
-//   flex-basis: 33%;
-// }
-// .col-4 {
-//   flex-basis: 25%;
-// }
+.link-active {
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 3rem;
+    left: 0;
+    height: 0.35rem;
+    z-index: 1000;
+    background: $mainGreen;
+    transition: $tran200ms;
+    opacity: 1;
+    width: 100%;
+  }
+}
+// animations
+.slide-in-left {
+  animation: slideInLeft alternate 500ms;
+}
+.slide-in-right {
+  animation: slideInRight alternate 500ms;
+}
+.slide-in-top {
+  animation: slideInTop alternate 500ms;
+}
+.slide-in-down {
+  animation: slideInDown alternate 500ms;
+}

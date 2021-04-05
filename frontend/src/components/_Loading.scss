@@ -1,0 +1,47 @@
+.loader {
+  display: grid;
+  place-content: center;
+  padding: 5rem;
+  background-color: #fff;
+
+  h1 {
+    text-align: center;
+  }
+  .x2-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    > span {
+      display: inline-block;
+      width: 20px;
+      height: 100px;
+      background-color: green;
+      transform-origin: 10px 65px;
+      border-radius: 1rem;
+      &:first-child {
+        transform: rotate(30deg);
+        animation: logoAnimex1 infinite alternate 500ms ease-in-out;
+      }
+      &:last-child {
+        transform: rotate(-30deg);
+        animation: logoAnimex2 infinite alternate 500ms ease-in-out;
+      }
+    }
+  }
+  @keyframes logoAnimex1 {
+    0% {
+      transform: rotate(30deg);
+    }
+    100% {
+      transform: rotate(40deg);
+    }
+  }
+  @keyframes logoAnimex2 {
+    0% {
+      transform: rotate(-30deg);
+    }
+    100% {
+      transform: rotate(-40deg);
+    }
+  }
+}

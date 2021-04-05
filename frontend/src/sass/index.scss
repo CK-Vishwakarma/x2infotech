@@ -1,11 +1,15 @@
 @import "./variables";
 @import "./mixins";
 @import "./globals";
+@import "./animations";
+
+@import "../components/Loading";
 
 @import "../pages/header/header";
 @import "../pages/header/mainNavbar";
 @import "../pages/header/secondaryNav";
 
+@import "../components/Carousels";
 @import "../pages/main/main";
 @import "../pages/main/home";
 @import "../pages/main/login";

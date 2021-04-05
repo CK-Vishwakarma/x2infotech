@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { ImHome } from "react-icons/im";
 import { GrProjects } from "react-icons/gr";
 import { RiCustomerServiceFill } from "react-icons/ri";
@@ -23,27 +23,41 @@ const MainNavbar = () => {
   return (
     <div className="main-navbar container">
       <div className="logo-section">
-        <img src="/images/logo.png" alt="x2 infotech" />
+        <Link to="/home">
+          <img src="/images/logofull.webp" alt="x2 infotech" />
+        </Link>
       </div>
       <div className="menu-section hide-on-tablet ">
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <NavLink activeClassName="link-active" to="/home">
+              Home
+            </NavLink>
           </li>
           <li>
-            <Link to="/portfolio">portfolio</Link>
+            <NavLink activeClassName="link-active" to="/portfolio">
+              portfolio
+            </NavLink>
           </li>
           <li>
-            <Link to="/services">services</Link>
+            <NavLink activeClassName="link-active" to="/services">
+              services
+            </NavLink>
           </li>
           <li>
-            <Link to="/career">career</Link>
+            <NavLink activeClassName="link-active" to="/career">
+              career
+            </NavLink>
           </li>
           <li>
-            <Link to="/contact">contact us</Link>
+            <NavLink activeClassName="link-active" to="/contact">
+              contact us
+            </NavLink>
           </li>
           <li>
-            <Link to="/about">about us</Link>
+            <NavLink activeClassName="link-active" to="/about">
+              about us
+            </NavLink>
           </li>
         </ul>
       </div>

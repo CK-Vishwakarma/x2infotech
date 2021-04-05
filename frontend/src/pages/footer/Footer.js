@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="footers">
+    <footer className="footers">
       <div className="container-full">
         <div className="container">
           <div className="footer-layout">
             <div className="col-4">
-              <img src="/images/logo.png" alt="logo" />
+              <img src="/images/logofull.webp" alt="logo" />
               <p>X2 is a Platform where you can grow your Business further</p>
             </div>
             <div className="col-4">
@@ -60,7 +60,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

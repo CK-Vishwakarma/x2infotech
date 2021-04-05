@@ -1,12 +1,19 @@
 .footers {
-  background-color: #ffffff;
+  grid-area: footers;
+  background-color: #003133;
+  color: white;
   padding: 4rem 2rem;
   .footer-layout {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
+    p {
+      color: rgba(207, 207, 207, 0.966);
+    }
     h1 {
+      color: white;
+
       font-size: 2.5rem;
     }
     img {
@@ -21,14 +28,16 @@
     ul {
       li {
         margin: 1.5rem 0;
+        color: rgba(226, 226, 226, 0.966);
 
         a {
-          color: $SubHeading;
+          color: rgba(207, 207, 207, 0.966);
         }
       }
     }
     h3 {
-      color: $Heading;
+      color: rgba(226, 226, 226, 0.966);
+
       margin-bottom: 0.5rem;
     }
 

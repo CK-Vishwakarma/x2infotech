@@ -23,13 +23,13 @@ const SecondaryNav = () => {
           </p>
         </div>
         <div className="col-1 ">
-          <span>
+          <span className="socials">
             <GrFacebookOption />
           </span>
-          <span>
+          <span className="socials">
             <GrLinkedinOption />
           </span>
-          <span>
+          <span className="socials">
             <AiOutlineInstagram />
           </span>
         </div>

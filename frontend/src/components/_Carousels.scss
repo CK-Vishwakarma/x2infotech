@@ -1,0 +1,80 @@
+.carousels {
+  width: 100%;
+  height: 100%;
+  max-width: 112rem;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .slider-div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 1s ease-in-out;
+    opacity: 0;
+
+    &.active {
+      opacity: 1;
+    }
+
+    .slider-img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  .next-btn,
+  .prev-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%);
+    padding: 2rem 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.479);
+    transition: all 500ms ease;
+    z-index: 200;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  }
+  .next-btn {
+    right: 1rem;
+  }
+
+  .prev-btn {
+    left: 1rem;
+  }
+}
+// media query
+
+@media screen and (max-width: 760px) {
+  .carousels {
+    .next-btn,
+    .prev-btn {
+      top: initial;
+      bottom: 5rem;
+      padding: 0.5rem;
+      font-size: 1.5rem;
+    }
+
+    .next-btn {
+      right: 40%;
+    }
+
+    .prev-btn {
+      left: 40%;
+    }
+  }
+}

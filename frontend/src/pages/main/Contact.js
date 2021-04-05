@@ -1,9 +1,10 @@
 import React from "react";
+import Carousels from "../../components/Carousels";
 
 const Contact = () => {
   return (
     <div>
-      <h1>Contact page</h1>
+      <Carousels />
     </div>
   );
 };

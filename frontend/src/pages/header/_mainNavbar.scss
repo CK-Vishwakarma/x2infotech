@@ -35,7 +35,7 @@
           width: 0%;
           height: 0.35rem;
           z-index: 1000;
-          background: $LG-green;
+          background: $mainGreen;
           opacity: 0;
           transition: $tran200ms;
         }
@@ -51,11 +51,11 @@
   }
 
   .cta {
-    background: $LG-green;
+    background: $mainGreen;
     transition: $tran300ms;
 
     &:hover {
-      background: $LG-Rgreen;
+      opacity: 0.75;
     }
   }
   .burger-container {
@@ -104,15 +104,14 @@
     transform: translateX(-100%);
 
     ul {
-      padding: 3rem 0;
+      padding: 2rem 0;
       li {
         padding: 1rem 3rem;
         margin: 0.5rem 0;
         border-left: 0rem solid $Green;
         transition: $tran300ms;
-
-        &:not(:last-child) {
-          border-bottom: 0.2rem solid $mainGreen;
+        &:nth-child(odd) {
+          background-color: rgb(247, 247, 247);
         }
         &:hover {
           background-color: $BGSecondary;
@@ -155,6 +154,19 @@
     &.open {
       opacity: 0.5;
       visibility: visible;
+    }
+  }
+
+  @include breakpoint-up(large) {
+    .logo-section {
+      img {
+        width: 12.5rem;
+      }
+    }
+  }
+  @include breakpoint-up(medium) {
+    .overlay {
+      top: 10rem;
     }
   }
 }

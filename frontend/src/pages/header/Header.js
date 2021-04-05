@@ -4,9 +4,9 @@ import MainNavbar from "./MainNavbar";
 const Header = () => {
   return (
     <>
-      <div className="headers">
+      <header className="headers">
         <MainNavbar />
-      </div>
+      </header>
     </>
   );
 };

@@ -16,6 +16,26 @@
       justify-content: flex-start;
       gap: 0 2rem;
 
+      .socials {
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        display: grid;
+        place-items: center;
+        padding: 0.2rem;
+        background-color: transparent;
+        cursor: pointer;
+        // color: $mainGreen;
+        // background-color: rgba(255, 255, 255, 0.966);
+
+        transition: background-color 300ms ease;
+        transition: all 300ms ease;
+        &:hover {
+          // background-color: rgba(255, 255, 255, 0.178);
+          background-color: rgba(255, 255, 255, 0.15);
+          color: $mainGreen;
+        }
+      }
       p {
         color: $White;
         font-size: $fs-sm;

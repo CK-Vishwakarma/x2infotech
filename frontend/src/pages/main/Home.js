@@ -1,5 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Tutors, ClientSlides } from "../../data/Data";
+// import { Link } from "react-router-dom";
 import { FaRupeeSign } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
 import { RiCustomerService2Fill } from "react-icons/ri";
@@ -9,16 +10,28 @@ import { FaStar } from "react-icons/fa";
 import { FaStarHalf } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa";
 import { FaQuoteLeft } from "react-icons/fa";
+import Carousels from "../../components/Carousels";
+
 const Home = () => {
+  const [currentRev, setCurrentRev] = useState(0);
+  useEffect(() => {
+    const length = Tutors.length;
+
+    const CarouselInterval1 = setInterval(() => {
+      setCurrentRev(currentRev === length - 1 ? 0 : currentRev + 1);
+    }, 5000);
+    return () => clearInterval(CarouselInterval1);
+  }, [currentRev]);
+
   return (
     <section className="home">
       <div className="container-full">
         <div className="container">
           <section className=" hero-section">
-            <div className="col-2">
-              <img src="/images/header.png" alt="hero image" />
+            <div className="col-1 slide-in-left">
+              <Carousels />
             </div>
-            <div className="col-2">
+            <div className="col-2 slide-in-right">
               <p>The Easiest Way To Boost Your Business</p>
               <h1>Design,Development and Manage Your Business</h1>
               <h2>By Getting Fastest Service With Us</h2>
@@ -32,7 +45,7 @@ const Home = () => {
       <div className="container-full why-us">
         <div className="container">
           <div className="why-us-heading">
-            <h1>Why Choose Us?</h1>
+            <h1 data-aos="fade-down">Why Choose Us?</h1>
             <hr />
             <p>
               Provide Best and Effective Services for your Online platform with
@@ -40,7 +53,7 @@ const Home = () => {
               Management to provide Good Customer Support.
             </p>
             <div className="cards">
-              <div className="single-card">
+              <div className="single-card ">
                 <div className="card-icon">
                   <RiCustomerService2Fill />
                 </div>
@@ -83,7 +96,7 @@ const Home = () => {
       {/* =================================================== */}
       <div className="container-full our-services ">
         <div className="container">
-          <h1>Our Services</h1>
+          <h1 data-aos="fade-down">Our Services</h1>
           <hr />
           <p>We provide services in different fields</p>
           <div className="cards-services">
@@ -110,7 +123,7 @@ const Home = () => {
       </div>
 
       {/* =================================================== */}
-      <div className="container-full">
+      {/* <div className="container-full">
         <div className="container">
           <div className="our-objective ">
             <div className="img-container">
@@ -128,48 +141,36 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* =================================================== */}
 
       <section className="employees container">
-        <h1>Our Best Professionals</h1>
+        <h1 data-aos="fade-down">Our Best Professionals</h1>
         <hr />
         <p>
           Showcase some of your highest rated tutors, top students or members of
           staff here. Images are automatically scaled to fit it displays well.
         </p>
-        <div className="employees-avatar">
-          <div className="img-holder">
-            <img src="/images/tutor1.svg" alt="tutors.svg" />
-            <p>aman singh tomar</p>
-          </div>
-          <div className="img-holder">
-            <img src="/images/tutor2.svg" alt="tutors.svg" />
-            <p>aman singh tomar</p>
-          </div>
-          <div className="img-holder">
-            <img src="/images/tutor3.svg" alt="tutors.svg" />
-            <p>aman singh tomar</p>
-          </div>
-          <div className="img-holder">
-            <img src="/images/tutor4.svg" alt="tutors.svg" />
-            <p>aman singh tomar</p>
-          </div>
-          <div className="img-holder">
-            <img src="/images/tutor5.svg" alt="tutors.svg" />
-            <p>aman singh tomar</p>
-          </div>
-          <div className="img-holder">
-            <img src="/images/tutor6.svg" alt="tutors.svg" />
-            <p>aman singh tomar</p>
-          </div>
+        <div className="employees-avatar" data-aos="fade-up">
+          {Tutors.map((tutor) => {
+            return (
+              <div className="img-holder" key={tutor._id}>
+                <img
+                  src={tutor.tutorImage}
+                  alt="tutors.svg"
+                  data-aos="flip-right"
+                />
+                <p>{tutor.fullName}</p>
+              </div>
+            );
+          })}
         </div>
       </section>
       {/* =================================================== */}
 
       <section
-        style={{ backgroundImage: "url(images/backg2.png)" }}
+        style={{ backgroundImage: "url(images/backg2.webp)" }}
         className="pricing container-full"
       >
         <div className="container">
@@ -182,7 +183,7 @@ const Home = () => {
             </p>
           </div>
           <div className="pricing-cards">
-            <div className="single-card">
+            <div className="single-card" data-aos="flip-left">
               <h2>Basic</h2>
               <h1>
                 <span>
@@ -204,7 +205,7 @@ const Home = () => {
                 Register
               </button>
             </div>
-            <div className="single-card active">
+            <div className="single-card active" data-aos="zoom-in-up">
               <h2>Basic</h2>
               <h1>
                 <span>
@@ -224,7 +225,7 @@ const Home = () => {
                 Register
               </button>
             </div>
-            <div className="single-card">
+            <div className="single-card" data-aos="flip-right">
               <h2>Basic</h2>
               <h1>
                 <span>
@@ -249,143 +250,72 @@ const Home = () => {
       </section>
       {/* =================================================== */}
       <div className="reviews">
-        <div className="container review-flex">
-          <div className="card">
-            <h1>
-              <FaQuoteLeft />
-            </h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-              quisquam rem sunt, fugit esse provident in expedita aut facere. Id
-              modi fugiat rem magnam hic facere, dolorum aspernatur eos
-              adipisci!
-            </p>
-            <div className="rating">
-              <span>
-                <FaStar />
-              </span>
-              <span>
-                <FaStar />
-              </span>
-              <span>
-                <FaStar />
-              </span>
-              <span>
-                <FaStar />
-              </span>
-              <span>
-                <FaStarHalf />
-              </span>
-            </div>
-            <div className="avatar">
-              <img src="/images/tutor1.svg" alt="client" />
-            </div>
-            <hr />
-            <h3>Aman Tomar</h3>
-          </div>
+        <div className="container ">
+          <h1 data-aos="fade-down">Testimonials</h1>
+          <hr />
 
-          {/* ================= */}
-          <div className="card">
-            <h1>
-              <FaQuoteLeft />
-            </h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-              quisquam rem sunt, fugit esse provident in expedita aut facere. Id
-              modi fugiat rem magnam hic facere, dolorum aspernatur eos
-              adipisci!
-            </p>
-            <div className="rating">
-              <span>
-                <FaStar />
-              </span>
-              <span>
-                <FaStar />
-              </span>
-              <span>
-                <FaStar />
-              </span>
-              <span>
-                <FaStar />
-              </span>
-              <span>
-                <FaStarHalf />
-              </span>
-            </div>
-            <div className="avatar">
-              <img src="/images/tutor3.svg" alt="client" />
-            </div>
-            <hr />
-            <h3>Aman Tomar</h3>
-          </div>
-          <div className="card">
-            <h1>
-              <FaQuoteLeft />
-            </h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-              quisquam rem sunt, fugit esse provident in expedita aut facere. Id
-              modi fugiat rem magnam hic facere, dolorum aspernatur eos
-              adipisci!
-            </p>
-            <div className="rating">
-              <span>
-                <FaStar />
-              </span>
-              <span>
-                <FaStar />
-              </span>
-              <span>
-                <FaStar />
-              </span>
-              <span>
-                <FaStar />
-              </span>
-              <span>
-                <FaRegStar />
-              </span>
-            </div>
-            <div className="avatar">
-              <img src="/images/tutor2.svg" alt="client" />
-            </div>
-            <hr />
-            <h3>Aman Tomar</h3>
+          <div className="review-flex">
+            {Tutors.map((tutor, index) => {
+              return (
+                <div
+                  className={
+                    currentRev === index ? "positioning active" : "positioning"
+                  }
+                  key={index}
+                >
+                  <div className="card">
+                    <h1>
+                      <FaQuoteLeft />
+                    </h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Aliquid quisquam rem sunt, fugit esse provident in
+                      expedita aut facere. Id modi fugiat rem magnam hic facere,
+                      dolorum aspernatur eos adipisci!
+                    </p>
+                    <div className="rating">
+                      <span>
+                        <FaStar />
+                      </span>
+                      <span>
+                        <FaStar />
+                      </span>
+                      <span>
+                        <FaStar />
+                      </span>
+                      <span>
+                        <FaStar />
+                      </span>
+                      <span>
+                        <FaStarHalf />
+                      </span>
+                    </div>
+                    <div className="avatar">
+                      <img src={tutor.tutorImage} alt={tutor.fullName} />
+                    </div>
+                    <hr />
+                    <h3>{tutor.fullName}</h3>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
+      {/* =================================================== */}
 
       <div className="client-carousels container-full">
-        <h1>Our Clients</h1>
+        <h1 data-aos="fade-down">Our Clients</h1>
         <hr />
         <div className="container">
-          <div className="clients">
-            <div className="client">
-              <img src="images/client-images/c1.jpg" alt="c1" />
-            </div>
-            <div className="client">
-              <img src="images/client-images/c2.jpg" alt="c1" />
-            </div>
-            <div className="client">
-              <img src="images/client-images/c3.jpg" alt="c1" />
-            </div>
-            <div className="client">
-              <img src="images/client-images/c4.jpg" alt="c1" />
-            </div>
-            <div className="client">
-              <img src="images/client-images/c5.jpg" alt="c1" />
-            </div>
-            <div className="client">
-              <img src="images/client-images/c6.jpg" alt="c1" />
-            </div>
-            <div className="client">
-              <img src="images/client-images/c7.jpg" alt="c1" />
-            </div>
-            <div className="client">
-              <img src="images/client-images/c8.png" alt="c1" />
-            </div>
-            <div className="client">
-              <img src="images/client-images/c9.png" alt="c1" />
-            </div>
+          <div className="clients" data-aos="fade-up">
+            {ClientSlides.map((client, index) => {
+              return (
+                <div className="client" key={index}>
+                  <img src={client.sliderImg} alt="clients" />
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
