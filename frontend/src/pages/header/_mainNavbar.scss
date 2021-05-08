@@ -46,6 +46,44 @@
             width: 100%;
           }
         }
+
+        .sub-menu {
+          background-color: white;
+          display: inline-block;
+          position: absolute;
+          top: 4rem;
+          left: 0rem;
+          width: max-content;
+          opacity: 0;
+
+          li {
+            margin-bottom: 0.75rem;
+
+            &::after {
+              content: "";
+              position: absolute;
+              display: block;
+              top: 2.2rem;
+              left: 0;
+              width: 0%;
+              height: 0.25rem;
+              z-index: 1000;
+              background: $mainGreen;
+              opacity: 0;
+              transition: $tran200ms;
+            }
+
+            &:hover {
+              &::after {
+                opacity: 1;
+                width: 100%;
+              }
+            }
+          }
+          &.open {
+            opacity: 1;
+          }
+        }
       }
     }
   }

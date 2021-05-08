@@ -1,10 +1,12 @@
 import React from "react";
-import Carousels from "../../components/Carousels";
+import NewCaro from "../../components/NewCaro";
 
 const Contact = () => {
   return (
-    <div>
-      <Carousels />
+    <div className="container">
+      <NewCaro />
+
+      <h1 style={{ textAlign: "center", marginTop: "5rem" }}>new carousels</h1>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Tutors, ClientSlides } from "../../data/Data";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaRupeeSign } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
 import { RiCustomerService2Fill } from "react-icons/ri";
@@ -8,7 +8,8 @@ import { GiMoneyStack } from "react-icons/gi";
 import { RiTimerLine } from "react-icons/ri";
 import { FaStar } from "react-icons/fa";
 import { FaStarHalf } from "react-icons/fa";
-import { FaRegStar } from "react-icons/fa";
+// import { FaRegStar } from "react-icons/fa";
+import { FaArrowAltCircleUp } from "react-icons/fa";
 import { FaQuoteLeft } from "react-icons/fa";
 import Carousels from "../../components/Carousels";
 
@@ -23,6 +24,10 @@ const Home = () => {
     return () => clearInterval(CarouselInterval1);
   }, [currentRev]);
 
+  const backtoTopFuunction = () => {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  };
   return (
     <section className="home">
       <div className="container-full">
@@ -319,6 +324,13 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      {document.body.scrollTop > 20 ||
+        (document.documentElement.scrollTop > 20 && (
+          <button className="back-to-top" onClick={backtoTopFuunction}>
+            <FaArrowAltCircleUp />
+          </button>
+        ))}
     </section>
   );
 };

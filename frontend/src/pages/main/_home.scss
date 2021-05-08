@@ -557,3 +557,20 @@
     }
   }
 }
+
+.back-to-top {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  padding: 1rem;
+  background-color: $mainGreen;
+  color: white;
+  border: transparent;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: $tran200ms;
+  &:hover {
+    opacity: 0.75;
+  }
+}
