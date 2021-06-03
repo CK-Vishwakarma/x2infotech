@@ -58,7 +58,7 @@ const Home = () => {
               Management to provide Good Customer Support.
             </p>
             <div className="cards">
-              <div className="single-card ">
+              <div className="single-card " data-aos="fade-right">
                 <div className="card-icon">
                   <RiCustomerService2Fill />
                 </div>
@@ -70,7 +70,7 @@ const Home = () => {
                   business.
                 </p>
               </div>
-              <div className="single-card">
+              <div className="single-card" data-aos="fade-up">
                 <div className="card-icon">
                   <GiMoneyStack />
                 </div>
@@ -82,7 +82,7 @@ const Home = () => {
                   build the projects regarding Customer Budget.
                 </p>
               </div>
-              <div className="single-card">
+              <div className="single-card" data-aos="fade-left">
                 <div className="card-icon">
                   <RiTimerLine />
                 </div>
