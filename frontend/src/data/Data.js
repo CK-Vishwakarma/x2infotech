@@ -81,3 +81,51 @@ export const Tutors = [
     tutorImage: "/images/tutors/tutor6.svg",
   },
 ];
+
+export const portfolios = [
+  {
+    _id: 1,
+    projectName: "C.K. Vishwakarma",
+    portfolioImg: "/images/portfolio/p1.webp",
+  },
+  {
+    _id: 2,
+    projectName: "Aman Tomar",
+    portfolioImg: "/images/portfolio/p2.webp",
+  },
+  {
+    _id: 3,
+    projectName: "Sachin Jain",
+    portfolioImg: "/images/portfolio/p3.webp",
+  },
+  {
+    _id: 4,
+    projectName: "Popat Lal",
+    portfolioImg: "/images/portfolio/p4.webp",
+  },
+  {
+    _id: 5,
+    projectName: "Jetha Lal",
+    portfolioImg: "/images/portfolio/p5.webp",
+  },
+  {
+    _id: 6,
+    projectName: "Babita Ayer",
+    portfolioImg: "/images/portfolio/p6.webp",
+  },
+  {
+    _id: 7,
+    projectName: "Babita Ayer",
+    portfolioImg: "/images/portfolio/p7.webp",
+  },
+  {
+    _id: 8,
+    projectName: "Babita Ayer",
+    portfolioImg: "/images/portfolio/p8.webp",
+  },
+  {
+    _id: 9,
+    projectName: "Babita Ayer",
+    portfolioImg: "/images/portfolio/p9.webp",
+  },
+];

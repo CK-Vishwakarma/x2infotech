@@ -8,14 +8,7 @@ import { GrWorkshop } from "react-icons/gr";
 import { MdPersonPin } from "react-icons/md";
 const MainNavbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [subMenuOpen, setSubMenuOpen] = useState(false);
 
-  const openSubMenu = () => {
-    setSubMenuOpen(true);
-  };
-  const closeSubMenu = () => {
-    setSubMenuOpen(false);
-  };
   const handleMenu = () => {
     setMenuOpen(!menuOpen);
   };
@@ -46,24 +39,10 @@ const MainNavbar = () => {
               portfolio
             </NavLink>
           </li>
-          <li onMouseOver={openSubMenu} onMouseLeave={closeSubMenu}>
+          <li>
             <NavLink activeClassName="link-active" to="/services">
               services
             </NavLink>
-            <ul className={subMenuOpen ? "sub-menu open" : "sub-menu"}>
-              <li>
-                <Link>Design and Development</Link>
-              </li>
-              <li>
-                <Link>Digital Marketing</Link>
-              </li>
-              <li>
-                <Link>Graphics Designing</Link>
-              </li>
-              <li>
-                <Link>Artificial Intelligence</Link>
-              </li>
-            </ul>
           </li>
           <li>
             <NavLink activeClassName="link-active" to="/career">
