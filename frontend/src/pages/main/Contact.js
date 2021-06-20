@@ -84,7 +84,6 @@ const Contact = () => {
               id="message"
               placeholder="Message"
               rows="5"
-              placeholder="Your Query..."
               required
             />
           </div>
@@ -94,6 +93,7 @@ const Contact = () => {
       </section>
       <section className="map">
         <iframe
+          title="our-location"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8268.896698316825!2d78.21068203955274!3d26.244905671795568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcb291f2375057110!2sX2%20Infotech%20Office!5e0!3m2!1sen!2sin!4v1624216335745!5m2!1sen!2sin"
           loading="lazy"
         ></iframe>

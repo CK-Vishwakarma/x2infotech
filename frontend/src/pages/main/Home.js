@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Tutors, ClientSlides } from "../../data/Data";
-import { Link } from "react-router-dom";
 import { FaRupeeSign } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
 import { RiCustomerService2Fill } from "react-icons/ri";
