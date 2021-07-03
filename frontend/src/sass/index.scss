@@ -8,10 +8,10 @@
 @import "../pages/header/header";
 @import "../pages/header/mainNavbar";
 @import "../pages/header/secondaryNav";
-//test caro
-@import "../components/newCaro";
-//end test
-@import "../components/Carousels";
+@import "../components/sliders/Carousel";
+@import "../components/sliders/ReviewSlider";
+@import "../components/ratings/Ratings";
+
 @import "../pages/main/main";
 @import "../pages/main/home";
 @import "../pages/main/login";

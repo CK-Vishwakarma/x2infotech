@@ -1,0 +1,52 @@
+.review-page {
+  position: relative;
+  width: 90vw;
+  height: 100%;
+}
+@media screen and (min-width: "1024px") {
+  .review-page {
+    width: 100%;
+  }
+  .swiper-slide {
+    width: 90vw;
+  }
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.swiper-slide {
+  /* Center slide text vertically */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 95%;
+  padding: 2rem 1rem;
+  img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    height: 100%;
+  }
+}
+.review-card {
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem;
+  border-radius: 01rem;
+  box-shadow: 1px 1px 5px rgba($color: #000000, $alpha: 0.5);
+  gap: 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  .quote-icon {
+    color: #55be65;
+  }
+  .img-container {
+    width: 120px;
+  }
+}

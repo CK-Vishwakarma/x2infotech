@@ -37,7 +37,12 @@ const Contact = () => {
           <br /> We'll be glad to hear from you, buddy.
         </h1>
 
-        <form autoComplete="off">
+        <form
+          autoComplete="off"
+          action="https://formsubmit.co/05547deepak@gmail.com"
+          method="POST"
+        >
+          <input type="hidden" name="_subject" value="New Email Query..." />
           <div className="inp-grp">
             <input
               type="text"
@@ -88,7 +93,9 @@ const Contact = () => {
             />
           </div>
 
-          <button className="btn contact-btn">Submit</button>
+          <button className="btn contact-btn" type="submit">
+            Submit
+          </button>
         </form>
       </section>
       <section className="map">

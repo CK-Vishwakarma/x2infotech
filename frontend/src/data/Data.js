@@ -54,31 +54,49 @@ export const Tutors = [
     _id: 1,
     fullName: "C.K. Vishwakarma",
     tutorImage: "/images/tutors/tutor1.svg",
+    review:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quisquam rem sunt, fugit esse provident in expedita aut facere. Id modi fugiat rem magnam hic facere, dolorum aspernatur eos adipisci!",
+    rating: 5,
   },
   {
     _id: 2,
     fullName: "Aman Tomar",
     tutorImage: "/images/tutors/tutor2.svg",
+    review:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quisquam rem sunt, fugit esse provident in expedita aut facere. Id modi fugiat rem magnam hic facere, dolorum aspernatur eos adipisci!",
+    rating: 5,
   },
   {
     _id: 3,
     fullName: "Sachin Jain",
     tutorImage: "/images/tutors/tutor3.svg",
+    review:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quisquam rem sunt, fugit esse provident in expedita aut facere. Id modi fugiat rem magnam hic facere, dolorum aspernatur eos adipisci!",
+    rating: 5,
   },
   {
     _id: 4,
     fullName: "Popat Lal",
     tutorImage: "/images/tutors/tutor4.svg",
+    review:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quisquam rem sunt, fugit esse provident in expedita aut facere. Id modi fugiat rem magnam hic facere, dolorum aspernatur eos adipisci!",
+    rating: 5,
   },
   {
     _id: 5,
     fullName: "Jetha Lal",
     tutorImage: "/images/tutors/tutor5.svg",
+    review:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quisquam rem sunt, fugit esse provident in expedita aut facere. Id modi fugiat rem magnam hic facere, dolorum aspernatur eos adipisci!",
+    rating: 5,
   },
   {
     _id: 6,
     fullName: "Babita Ayer",
     tutorImage: "/images/tutors/tutor6.svg",
+    review:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quisquam rem sunt, fugit esse provident in expedita aut facere. Id modi fugiat rem magnam hic facere, dolorum aspernatur eos adipisci!",
+    rating: 5,
   },
 ];
 

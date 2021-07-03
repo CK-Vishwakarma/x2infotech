@@ -1,0 +1,17 @@
+.services-page {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .col-1 {
+    color: red;
+    width: 50%;
+  }
+
+  @media screen and (max-width: "1024px") {
+    flex-direction: column;
+    .col-1 {
+      width: 90%;
+    }
+  }
+}

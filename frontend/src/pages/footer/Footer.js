@@ -15,13 +15,13 @@ const Footer = () => {
               <h1>SERVICES</h1>
               <ul>
                 <li>
-                  <Link>Design and Development</Link>
+                  <Link to="/">Design and Development</Link>
                 </li>
                 <li>
-                  <Link>Digital Marketing</Link>
+                  <Link to="/">Digital Marketing</Link>
                 </li>
                 <li>
-                  <Link>Graphics Design</Link>
+                  <Link to="/">Graphics Design</Link>
                 </li>
               </ul>
             </div>
@@ -29,11 +29,11 @@ const Footer = () => {
               <h1>QUICK LINKS</h1>
               <ul>
                 <li>
-                  <Link>About Us</Link>
+                  <Link to="/">About Us</Link>
                 </li>
 
                 <li>
-                  <Link>Portfolio</Link>
+                  <Link to="/">Portfolio</Link>
                 </li>
               </ul>
             </div>
@@ -41,11 +41,11 @@ const Footer = () => {
               <h1>CONTACT US</h1>
               <ul>
                 <li>
-                  <Link>info@x2infotech.com</Link>
+                  <Link to="/">info@x2infotech.com</Link>
                 </li>
 
                 <li>
-                  <Link>hr@x2infotech.com</Link>
+                  <Link to="/">hr@x2infotech.com</Link>
                 </li>
               </ul>
               <div className="contact-1">
