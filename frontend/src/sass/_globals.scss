@@ -87,7 +87,10 @@ p {
 .mx-auto {
   margin: 0 auto;
 }
-
+.call-action-link {
+  text-decoration: none;
+  color: $White;
+}
 a,
 a:hover,
 a:active {

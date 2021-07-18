@@ -61,9 +61,12 @@ const MainNavbar = () => {
           </li>
         </ul>
       </div>
-      <Link to="/" className="btn cta hide-on-tablet">
+      <a
+        href="tel:91 7999319552"
+        className="call-action-link btn cta hide-on-tablet"
+      >
         Hire Us
-      </Link>
+      </a>
       <div className="burger-container hide-on-desktop">
         <div
           onClick={handleMenu}

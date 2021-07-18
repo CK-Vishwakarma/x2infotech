@@ -29,7 +29,12 @@ const Home = () => {
                 <p>The Easiest Way To Boost Your Business</p>
                 <h1>Design,Development and Manage Your Business</h1>
                 <h2>By Getting Fastest Service With Us</h2>
-                <button className="btn cta ">Call Now</button>
+                <a
+                  className="call-action-link btn cta"
+                  href="tel:+917999319552"
+                >
+                  Call Now
+                </a>
               </div>
             </div>
           </section>

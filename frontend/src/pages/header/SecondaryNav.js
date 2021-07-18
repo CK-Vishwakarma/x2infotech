@@ -13,13 +13,17 @@ const SecondaryNav = () => {
             <span>
               <IoCallSharp />
             </span>
-            Call us: +91 7999319552
+            <a className="call-action-link" href="tel:+917999319552">
+              Call us: +91 7999319552
+            </a>
           </p>
           <p>
             <span>
               <RiMailLine />
             </span>
-            Email: info@x2infotech.com
+            <a className="call-action-link" href="mailto:info@x2infotech.com">
+              Email: info@x2infotech.com
+            </a>
           </p>
         </div>
         <div className="col-1 ">
