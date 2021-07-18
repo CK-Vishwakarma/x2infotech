@@ -271,5 +271,30 @@ ul {
     padding: 0 1rem;
     z-index: 1000;
     transition: all 200ms ease-in;
+    cursor: text;
+  }
+}
+
+// select group
+.select-grp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  margin-bottom: 1.5rem;
+  height: 5rem;
+  border-radius: 0.5rem;
+  font-size: 1.7rem;
+  padding: 0 1.5rem;
+  color: $otherSubHeading;
+  border: 0.2rem solid rgb(207, 207, 207);
+
+  select {
+    border: none;
+    outline: none;
+    color: $otherSubHeading;
+    font-size: 1.8rem;
+    background-color: transparent;
+    padding: 0rem 2rem;
   }
 }
