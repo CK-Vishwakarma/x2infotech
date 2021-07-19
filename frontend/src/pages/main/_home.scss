@@ -401,12 +401,13 @@
         width: 20rem;
         height: 12rem;
         transition: $tran300ms;
-        filter: grayscale(100%);
+        // filter: grayscale(100%);
         border-radius: 1rem;
         cursor: pointer;
         box-shadow: 0px 1px 5px rgba($color: #000000, $alpha: 0.2);
+        margin-bottom: 5rem;
         img {
-          width: 10rem;
+          width: 15rem;
           object-fit: contain;
         }
 
@@ -415,22 +416,5 @@
         }
       }
     }
-  }
-}
-
-.back-to-top {
-  position: fixed;
-  bottom: 0rem;
-  right: 0rem;
-  z-index: 9000;
-  padding: 1rem;
-  background-color: $mainGreen;
-  color: white;
-  border: transparent;
-  font-size: 2rem;
-  cursor: pointer;
-  transition: $tran200ms;
-  &:hover {
-    opacity: 0.75;
   }
 }

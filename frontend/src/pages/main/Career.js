@@ -24,13 +24,13 @@ const Career = () => {
   return (
     <div className="career-page container-full">
       <section className="heading">
-        <h1>
+        <h1 data-aos="fade-down">
           <span>Career</span> Options
         </h1>
         <hr />
       </section>
 
-      <section className="career-form">
+      <section className="career-form" data-aos="fade-up">
         <div className="container">
           <h1>Send Your Resume Here. </h1>
           <h2>Please complete the form below to apply.</h2>
@@ -126,7 +126,7 @@ const Career = () => {
       </section>
       <section className="frequently-asked">
         <div className="container">
-          <section className="heading">
+          <section className="heading" data-aos="fade-down">
             <h1>
               Frequently<span> Asked </span> Questions
             </h1>

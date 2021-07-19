@@ -3,7 +3,11 @@ import React from "react";
 const About = () => {
   return (
     <div className="about-page">
-      <section className="heading">
+      <section
+        className="heading"
+        data-aos="fade-down"
+        data-aos-anchor-placement="bottom-bottom"
+      >
         <h1>
           <span>About</span> Us
         </h1>
@@ -11,7 +15,7 @@ const About = () => {
       </section>
       <div className="container-full">
         <section className="hero container ">
-          <div className="col-1">
+          <div className="col-1" data-aos="fade-right">
             <h1>
               We Build Friendly and Lasting Relationship between Client and Us.
             </h1>
@@ -24,14 +28,18 @@ const About = () => {
               business.
             </h2>
           </div>
-          <div className="col-2">
+          <div className="col-2" data-aos="fade-left">
             <div className="img-container">
               <img src="/images/about-us.webp" alt="about us" />
             </div>
           </div>
         </section>
       </div>
-      <section className="heading">
+      <section
+        className="heading"
+        data-aos="fade-down"
+        data-aos-anchor-placement="bottom-bottom"
+      >
         <h1>
           <span>Our</span> Objective
         </h1>
@@ -42,7 +50,7 @@ const About = () => {
           className="objective container "
           style={{ backgroundImage: "url(/images/bg1.svg)" }}
         >
-          <div className="col-1">
+          <div className="col-1" data-aos="fade-left">
             <h1>
               We Build Friendly and Lasting Relationship between Client and Us.
             </h1>
@@ -55,7 +63,7 @@ const About = () => {
               business.
             </h2>
           </div>
-          <div className="col-2">
+          <div className="col-2" data-aos="fade-right">
             <div className="img-container">
               <img src="/images/about-us2.webp" alt="about us" />
             </div>
