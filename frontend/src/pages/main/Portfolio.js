@@ -1,5 +1,6 @@
 import React from "react";
 import { portfolios } from "../../data/Data";
+import { Link } from "react-router-dom";
 
 const Portfolio = () => {
   return (
@@ -15,6 +16,10 @@ const Portfolio = () => {
           return (
             <article key={portfolio._id}>
               <img src={portfolio.portfolioImg} alt={portfolio.projectName} />
+
+              <Link to="/" className="visit-btn">
+                <p>Visit</p>
+              </Link>
             </article>
           );
         })}

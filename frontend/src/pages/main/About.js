@@ -66,8 +66,9 @@ const About = () => {
           <div className="col-2" data-aos="fade-right">
             <div className="img-container">
               <img src="/images/about-us2.webp" alt="about us" />
+              <hr />
+              <h2>X2 INFOTECH,CEO </h2>
             </div>
-            <h2>X2 INFOTECH,CEO </h2>
           </div>
         </section>
       </div>

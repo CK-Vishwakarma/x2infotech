@@ -374,6 +374,17 @@ ul {
   visibility: visible;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 @-webkit-keyframes slideInLeft {
   0% {
     opacity: 0;
@@ -1467,6 +1478,22 @@ ul {
   margin-bottom: 5rem;
 }
 
+.home .reviews .review {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+}
+
 .home .reviews hr {
   margin-bottom: 3rem;
 }
@@ -1521,11 +1548,11 @@ ul {
   cursor: pointer;
   -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 .home .client-carousels .clients .client img {
-  width: 15rem;
+  width: 10rem;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -1533,6 +1560,16 @@ ul {
 .home .client-carousels .clients .client:hover {
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
+}
+
+@media (min-width: 1024px) {
+  .home .client-carousels .clients .client {
+    margin-bottom: 5rem;
+    height: 15rem;
+  }
+  .home .client-carousels .clients .client img {
+    width: 15rem;
+  }
 }
 
 .portfolio-page .heading {
@@ -1551,10 +1588,43 @@ ul {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  gap: 2rem;
+  gap: 3rem;
   -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   margin-bottom: 5rem;
+}
+
+.portfolio-page .hero article {
+  position: relative;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+
+.portfolio-page .hero article::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: transparent;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.portfolio-page .hero article:hover::after {
+  background-color: rgba(0, 0, 0, 0.527);
+}
+
+.portfolio-page .hero article:hover .visit-btn {
+  opacity: 1;
 }
 
 .portfolio-page .hero article img {
@@ -1562,6 +1632,23 @@ ul {
      object-fit: contain;
   width: 100%;
   height: 100%;
+}
+
+.portfolio-page .hero article .visit-btn {
+  position: absolute;
+  z-index: 200;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: whitesmoke;
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  border-radius: 0.3rem;
+  -webkit-transition: all 300 ease;
+  transition: all 300 ease;
+  opacity: 0;
 }
 
 .services-page {
@@ -1619,6 +1706,7 @@ ul {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   overflow: hidden;
+  background-color: white;
 }
 
 .about-page .hero .col-1 {
@@ -1627,32 +1715,29 @@ ul {
 
 .about-page .hero .col-2 {
   margin-top: 1rem;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
 }
 
 .about-page .hero .col-2 .img-container {
   width: 100%;
   height: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
   position: relative;
   margin-bottom: 2rem;
-}
-
-.about-page .hero .col-2 .img-container::before {
-  content: "";
-  position: absolute;
-  top: 1rem;
-  right: -1.2rem;
-  background-color: #55be65;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  border-radius: 0.5rem;
+  padding: 2rem 0 0;
 }
 
 .about-page .hero .col-2 .img-container img {
-  width: 100%;
+  width: 90%;
   -o-object-fit: contain;
      object-fit: contain;
   border-radius: 0.5rem;
+  border-right: 0.5rem solid #55be65;
+  border-bottom: 0.5rem solid #55be65;
 }
 
 @media (min-width: 1024px) {
@@ -1669,7 +1754,7 @@ ul {
     width: 45%;
   }
   .about-page .hero .col-2 .img-container {
-    width: 100%;
+    width: 80%;
   }
 }
 
@@ -1694,19 +1779,31 @@ ul {
 
 .about-page .objective .col-2 {
   margin-top: 1rem;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
 }
 
 .about-page .objective .col-2 .img-container {
   width: 100%;
   height: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
   margin-bottom: 2rem;
+  padding: 2rem;
+}
+
+.about-page .objective .col-2 .img-container h2 {
+  text-align: center;
 }
 
 .about-page .objective .col-2 .img-container img {
-  width: 100%;
+  width: 70%;
   -o-object-fit: contain;
      object-fit: contain;
   border-radius: 0.5rem;
+  margin-bottom: 2rem;
 }
 
 @media (min-width: 1024px) {
@@ -1727,8 +1824,16 @@ ul {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+    border-right: 1rem solid #55be65;
   }
   .about-page .objective .col-2 .img-container {
+    width: 80%;
+    padding: 2rem 0 0;
+  }
+  .about-page .objective .col-2 .img-container h2 {
+    text-align: left;
+  }
+  .about-page .objective .col-2 .img-container img {
     width: 100%;
   }
 }
@@ -1760,7 +1865,7 @@ ul {
 }
 
 .career-page .career-form h1 {
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 .career-page .career-form form {
@@ -1780,13 +1885,20 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 1.5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2rem;
   height: 5rem;
   border-radius: 0.5rem;
   font-size: 1.8rem;
   padding: 0 1.5rem;
   color: #49495c;
   border: 0.2rem solid #cfcfcf;
+}
+
+.career-page .career-form form .inp-grp-file label {
+  display: none;
 }
 
 .career-page .career-form form .inp-grp-file:focus {
@@ -1798,6 +1910,9 @@ ul {
     margin-top: 5rem;
     text-align: center;
   }
+  .career-page .career-form h1 {
+    margin-bottom: 3rem;
+  }
   .career-page .career-form form {
     margin: 0 auto;
     width: 60%;
@@ -1805,6 +1920,9 @@ ul {
   .career-page .career-form form .contact-btn {
     font-size: 1.8rem;
     width: 70%;
+  }
+  .career-page .career-form form .inp-grp-file {
+    margin-bottom: 3rem;
   }
 }
 
@@ -2009,11 +2127,13 @@ ul {
 .footers .copyright-text {
   text-align: center;
   margin-top: 2rem;
+  font-size: 1rem;
 }
 
 @media (min-width: 1024px) {
   .footers .copyright-text {
     text-align: left;
+    font-size: 1.5rem;
   }
 }
 
