@@ -298,3 +298,25 @@ ul {
     padding: 0rem 2rem;
   }
 }
+
+.back-to-top {
+  position: fixed;
+  bottom: 1rem;
+  right: 01rem;
+  z-index: 9000;
+  padding: 0.6rem 0.7rem;
+  background-color: $mainGreen;
+  color: white;
+  border: transparent;
+  font-size: 1.8rem;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  transition: $tran200ms;
+  visibility: hidden;
+  &:hover {
+    opacity: 0.75;
+  }
+  &.visible {
+    visibility: visible;
+  }
+}

@@ -2,7 +2,11 @@ import React from "react";
 const Contact = () => {
   return (
     <div className="container contact-page">
-      <section className=" heading">
+      <section
+        className=" heading"
+        data-aos="fade-up"
+        data-aos-anchor-placement="bottom-bottom"
+      >
         <h1>Our Global Offices</h1>
         <hr />
         <h2 className="sub-heading">
@@ -31,7 +35,7 @@ const Contact = () => {
         </p>
       </section>
       <hr />
-      <section className="contact-form">
+      <section className="contact-form" data-aos="fade-up">
         <h1>
           Feel free to contact us.
           <br /> We'll be glad to hear from you, buddy.

@@ -1,5 +1,5 @@
 import React from "react";
-import { Tutors, ClientSlides } from "../../data/Data";
+import { Tutors } from "../../data/Data";
 import { FaRupeeSign } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
 import { RiCustomerService2Fill } from "react-icons/ri";
@@ -7,37 +7,35 @@ import { GiMoneyStack } from "react-icons/gi";
 import { RiTimerLine } from "react-icons/ri";
 
 // import { FaRegStar } from "react-icons/fa";
-import { FaArrowAltCircleUp } from "react-icons/fa";
 import Carousel from "../../components/sliders/Carousel";
 import ReviewSlider from "../../components/sliders/ReviewsSlider";
+import ClientSlider from "../../components/sliders/ClientSlider";
 
 const Home = () => {
-  const backtoTopFuunction = () => {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-  };
   return (
     <section className="home">
       <div className="container-full">
         <div className="container">
-          <section className=" hero-section">
-            <div className="col-1">
-              <Carousel />
-            </div>
-            <div className="col-2">
-              <div>
-                <p>The Easiest Way To Boost Your Business</p>
-                <h1>Design,Development and Manage Your Business</h1>
-                <h2>By Getting Fastest Service With Us</h2>
-                <a
-                  className="call-action-link btn cta"
-                  href="tel:+917999319552"
-                >
-                  Call Now
-                </a>
+          <div className="gridBox">
+            <section className=" hero-section">
+              <div className="col-1">
+                <Carousel />
               </div>
-            </div>
-          </section>
+              <div className="col-2">
+                <div>
+                  <p>The Easiest Way To Boost Your Business</p>
+                  <h1>Design,Development and Manage Your Business</h1>
+                  <h2>By Getting Fastest Service With Us</h2>
+                  <a
+                    className="call-action-link btn cta"
+                    href="tel:+917999319552"
+                  >
+                    Call Now
+                  </a>
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
       </div>
       {/* ============================================== */}
@@ -235,24 +233,10 @@ const Home = () => {
         <h1 data-aos="fade-down">Our Clients</h1>
         <hr />
         <div className="container">
-          <div className="clients" data-aos="fade-up">
-            {ClientSlides.map((client, index) => {
-              return (
-                <div className="client" key={index}>
-                  <img src={client.sliderImg} alt="clients" />
-                </div>
-              );
-            })}
+          <div className="clients">
+            <ClientSlider />
           </div>
         </div>
-      </div>
-      <div className="container">
-        {document.body.scrollTop > 20 ||
-          (document.documentElement.scrollTop > 20 && (
-            <button className="back-to-top" onClick={backtoTopFuunction}>
-              <FaArrowAltCircleUp />
-            </button>
-          ))}
       </div>
     </section>
   );

@@ -1,7 +1,5 @@
 import React from "react";
-import { Tutors } from "../../data/Data";
-import { FaQuoteLeft } from "react-icons/fa";
-import Ratings from "../ratings/Ratings";
+import { ClientSlides } from "../../data/Data";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -16,11 +14,11 @@ import SwiperCore, { Pagination } from "swiper/core";
 // install Swiper modules
 SwiperCore.use([Pagination]);
 
-const ReviewsSlider = () => {
+const ClientSlider = () => {
   return (
     <div className="review-page">
       <Swiper
-        slidesPerView={1}
+        slidesPerView={2}
         spaceBetween={10}
         slidesPerGroup={1}
         loop={true}
@@ -30,15 +28,15 @@ const ReviewsSlider = () => {
         }}
         breakpoints={{
           640: {
-            slidesPerView: 2,
+            slidesPerView: 3,
             spaceBetween: 20,
           },
           768: {
-            slidesPerView: 3,
+            slidesPerView: 4,
             spaceBetween: 20,
           },
           1024: {
-            slidesPerView: 3,
+            slidesPerView: 5,
             spaceBetween: 30,
           },
         }}
@@ -48,22 +46,11 @@ const ReviewsSlider = () => {
         }}
         className="mySwiper"
       >
-        {Tutors.map((tutor, tutorIndex) => {
+        {ClientSlides.map((ClientSlide, clientIndex) => {
           return (
-            <SwiperSlide key={tutorIndex}>
-              <div className="review-card">
-                <h1 className="quote-icon">
-                  <FaQuoteLeft />
-                </h1>
-                <p className="review-text">{tutor.review}</p>
-                <div>
-                  <Ratings />
-                </div>
-                <div className="img-container">
-                  <img src={tutor.tutorImage} alt={tutor.fullName} />
-                </div>
-                <hr />
-                <h2>{tutor.fullName}</h2>
+            <SwiperSlide key={clientIndex}>
+              <div className="client">
+                <img src={ClientSlide.sliderImg} alt="clients" />
               </div>
             </SwiperSlide>
           );
@@ -73,4 +60,4 @@ const ReviewsSlider = () => {
   );
 };
 
-export default ReviewsSlider;
+export default ClientSlider;

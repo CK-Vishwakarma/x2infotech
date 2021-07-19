@@ -349,6 +349,31 @@ ul {
   padding: 0rem 2rem;
 }
 
+.back-to-top {
+  position: fixed;
+  bottom: 1rem;
+  right: 01rem;
+  z-index: 9000;
+  padding: 0.6rem 0.7rem;
+  background-color: #55be65;
+  color: white;
+  border: transparent;
+  font-size: 1.8rem;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  visibility: hidden;
+}
+
+.back-to-top:hover {
+  opacity: 0.75;
+}
+
+.back-to-top.visible {
+  visibility: visible;
+}
+
 @-webkit-keyframes slideInLeft {
   0% {
     opacity: 0;
@@ -952,10 +977,10 @@ ul {
   place-items: center;
   padding: 2rem 1rem;
   border-radius: 01rem;
-  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
   width: 100%;
 }
 
@@ -1492,16 +1517,15 @@ ul {
   height: 12rem;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
   border-radius: 1rem;
   cursor: pointer;
   -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 5rem;
 }
 
 .home .client-carousels .clients .client img {
-  width: 10rem;
+  width: 15rem;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -1509,25 +1533,6 @@ ul {
 .home .client-carousels .clients .client:hover {
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
-}
-
-.back-to-top {
-  position: fixed;
-  bottom: 0rem;
-  right: 0rem;
-  z-index: 9000;
-  padding: 1rem;
-  background-color: #55be65;
-  color: white;
-  border: transparent;
-  font-size: 2rem;
-  cursor: pointer;
-  -webkit-transition: all 200ms ease;
-  transition: all 200ms ease;
-}
-
-.back-to-top:hover {
-  opacity: 0.75;
 }
 
 .portfolio-page .heading {
@@ -1613,6 +1618,7 @@ ul {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .about-page .hero .col-1 {
@@ -1679,6 +1685,7 @@ ul {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .about-page .objective .col-1 {
@@ -1997,5 +2004,23 @@ ul {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
+}
+
+.footers .copyright-text {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .footers .copyright-text {
+    text-align: left;
+  }
+}
+
+.footers .hr-line {
+  width: 100%;
+  height: 0.2rem;
+  background-color: #002427;
+  margin: 2rem 0;
 }
 /*# sourceMappingURL=index.css.map */

@@ -58,6 +58,10 @@ const Footer = () => {
               </div>
             </div>
           </div>
+          <div className="hr-line"></div>
+          <section className="copyright-text">
+            &copy; All rights reserved 2021 @ X2 Infotech.com
+          </section>
         </div>
       </div>
     </footer>
