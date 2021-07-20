@@ -225,7 +225,9 @@ const Home = () => {
         <div className="container ">
           <h1 data-aos="fade-down">Testimonials</h1>
           <hr />
-          <ReviewSlider />
+          <div className="review">
+            <ReviewSlider />
+          </div>
         </div>
       </div>
       {/* =================================================== */}

@@ -79,7 +79,7 @@ const Career = () => {
                 type="text"
                 name="qualification"
                 id="qualification"
-                placeholder="For ex- BE/B.Tech"
+                placeholder="BE/B.Tech"
                 required
               />
               <label htmlFor="qualification">Qualification</label>
@@ -112,7 +112,9 @@ const Career = () => {
               />
             </div>
             <div className="inp-grp-file">
+              {/* <label htmlFor="fileupload">Resume</label> */}
               <input
+                id="fileupload"
                 type="file"
                 name="attachment"
                 accept="application/pdf,application/doc"

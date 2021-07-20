@@ -59,7 +59,7 @@ const Contact = () => {
           </div>
           <div className="inp-grp">
             <input
-              type="tel"
+              type="number"
               name="phone"
               id="phone"
               placeholder="Phone"
