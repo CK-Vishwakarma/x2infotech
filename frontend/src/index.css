@@ -495,6 +495,8 @@ input[type="number"] {
   place-content: center;
   padding: 5rem;
   background-color: #fff;
+  height: 100vh;
+  width: 100%;
 }
 
 .loader h1 {

@@ -5,6 +5,8 @@ import Footer from "./pages/footer/Footer";
 import SecondaryNav from "./pages/header/SecondaryNav";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Loading from "./components/Loading";
+import { useState } from "react";
 // import { FaArrowAltCircleUp } from "react-icons/fa";
 
 const App = () => {
@@ -15,20 +17,33 @@ const App = () => {
   //     ? console.log("going down")
   //     : console.log("up");
   // };
+  const [loading, setLoading] = useState(true);
+
+  const loadingFunction = async () => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  };
+
   useEffect(() => {
+    loadingFunction();
     AOS.init({ duration: 1000 });
   }, []);
 
-  return (
-    <>
-      <div className="grid-container">
-        <SecondaryNav />
-        <Header />
-        <Main />
-        <Footer />
-      </div>
+  if (loading) {
+    return <Loading />;
+  } else {
+    return (
+      <>
+        <div className="grid-container">
+          <SecondaryNav />
+          <Header />
+          <Main />
+          <Footer />
+        </div>
 
-      {/* <button
+        {/* <button
         className={
           document.body.scrollTop > 30 ||
           document.documentElement.scrollTop > 30
@@ -39,8 +54,9 @@ const App = () => {
       >
         <FaArrowAltCircleUp />
       </button> */}
-    </>
-  );
+      </>
+    );
+  }
 };
 
 export default App;
