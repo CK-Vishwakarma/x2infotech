@@ -51,15 +51,19 @@
           background-color: white;
           display: inline-block;
           position: absolute;
-          top: 4rem;
+          top: 3rem;
           left: 0rem;
-          width: max-content;
-          padding: 0.5rem 2rem 1rem 1rem;
+          z-index: 3000;
+          width: 25rem;
+          padding: 01rem 1rem;
           opacity: 0;
-
+          visibility: hidden;
+          transition: $tran200ms;
           li {
-            margin-bottom: 0.75rem;
-
+            // margin-bottom: 1rem;
+            &:not(:last-child) {
+              margin-bottom: 1rem;
+            }
             &::after {
               content: "";
               position: absolute;
@@ -79,10 +83,46 @@
                 opacity: 1;
                 width: 100%;
               }
+              .sub-sub-menu {
+                opacity: 1;
+                visibility: visible;
+              }
+            }
+            .sub-sub-menu {
+              position: relative;
+              width: 100%;
+              opacity: 0;
+              visibility: hidden;
+              transition: $tran200ms;
+
+              ul {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                padding: 1rem 0;
+                width: 100%;
+                right: -103%;
+                top: -3rem;
+                display: inline-block;
+                background-color: white;
+
+                li {
+                  padding: 0 1rem;
+                }
+              }
+              &.open {
+                opacity: 1;
+                visibility: visible;
+              }
+              &:hover {
+                opacity: 1;
+                visibility: visible;
+              }
             }
           }
           &.open {
             opacity: 1;
+            visibility: visible;
           }
         }
       }

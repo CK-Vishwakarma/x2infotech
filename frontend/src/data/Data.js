@@ -56,7 +56,7 @@ export const Tutors = [
     tutorImage: "/images/tutors/tutor1.svg",
     review:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quisquam rem sunt, fugit esse provident in expedita aut facere. Id modi fugiat rem magnam hic facere, dolorum aspernatur eos adipisci!",
-    rating: 5,
+    rating: 2.6,
   },
   {
     _id: 2,
@@ -64,7 +64,7 @@ export const Tutors = [
     tutorImage: "/images/tutors/tutor2.svg",
     review:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quisquam rem sunt, fugit esse provident in expedita aut facere. Id modi fugiat rem magnam hic facere, dolorum aspernatur eos adipisci!",
-    rating: 5,
+    rating: 3,
   },
   {
     _id: 3,
@@ -80,10 +80,10 @@ export const Tutors = [
     tutorImage: "/images/tutors/tutor4.svg",
     review:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quisquam rem sunt, fugit esse provident in expedita aut facere. Id modi fugiat rem magnam hic facere, dolorum aspernatur eos adipisci!",
-    rating: 5,
+    rating: 4.7,
   },
   {
-    _id: 5,
+    _id: 3.5,
     fullName: "Jetha Lal",
     tutorImage: "/images/tutors/tutor5.svg",
     review:
@@ -96,7 +96,7 @@ export const Tutors = [
     tutorImage: "/images/tutors/tutor6.svg",
     review:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quisquam rem sunt, fugit esse provident in expedita aut facere. Id modi fugiat rem magnam hic facere, dolorum aspernatur eos adipisci!",
-    rating: 5,
+    rating: 4,
   },
 ];
 

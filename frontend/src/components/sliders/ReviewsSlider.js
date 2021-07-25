@@ -57,7 +57,7 @@ const ReviewsSlider = () => {
                 </h1>
                 <p className="review-text">{tutor.review}</p>
                 <div>
-                  <Ratings />
+                  <Ratings tutor={tutor} />
                 </div>
                 <div className="img-container">
                   <img src={tutor.tutorImage} alt={tutor.fullName} />

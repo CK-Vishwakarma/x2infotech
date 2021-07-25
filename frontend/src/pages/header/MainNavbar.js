@@ -8,6 +8,7 @@ import { GrWorkshop } from "react-icons/gr";
 import { MdPersonPin } from "react-icons/md";
 const MainNavbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [subMenuOpen, setSubMenuOpen] = useState(false);
 
   const handleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -20,6 +21,13 @@ const MainNavbar = () => {
   const closeMenu = () => {
     setMenuOpen(false);
   };
+  const subMenuOpenFunc = () => {
+    setSubMenuOpen(true);
+  };
+  const subMenuCloseFunc = () => {
+    setSubMenuOpen(false);
+  };
+
   return (
     <div className="main-navbar container">
       <div className="logo-section">
@@ -39,10 +47,70 @@ const MainNavbar = () => {
               portfolio
             </NavLink>
           </li>
-          <li>
-            <NavLink activeClassName="link-active" to="/services">
+          <li onMouseEnter={subMenuOpenFunc} onMouseLeave={subMenuCloseFunc}>
+            <NavLink activeClassName="link-active" to="#">
               services
             </NavLink>
+            <ul className={subMenuOpen ? "sub-menu open" : "sub-menu"}>
+              <li>
+                <Link to="#">Design and Development</Link>
+                <div className="sub-sub-menu">
+                  <ul>
+                    <li>
+                      <Link to="/services/website-design">Website Design </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/mobile-application">
+                        Mobile Applications
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/CMS">CMS</Link>
+                    </li>
+                    <li>
+                      <Link to="/services/system-maintenance">
+                        System Maintenance
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <Link to="#">Digital Marketing</Link>
+                <div className="sub-sub-menu">
+                  <ul>
+                    <li>
+                      <Link to="/services/SEO">SEO</Link>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <Link to="#">Graphic Design</Link>
+                <div className="sub-sub-menu">
+                  <ul>
+                    <li>
+                      <Link to="/services/advertising-and-promotion">
+                        Advertising & Promotion
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/brochure-design">
+                        Brochure Design{" "}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/logo-design">Logo Design</Link>
+                    </li>
+                    <li>
+                      <Link to="/services/video-editing">
+                        Video and Photo Editing
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
           </li>
           <li>
             <NavLink activeClassName="link-active" to="/career">
