@@ -1,0 +1,70 @@
+.cms-page {
+  margin-bottom: 2rem;
+  .heading {
+    margin: 3rem 0;
+    h1 {
+      span {
+        color: $mainGreen;
+      }
+      text-align: center;
+    }
+  }
+
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    background-color: white;
+    .col-1 {
+      text-align: center;
+    }
+    .col-2 {
+      margin-top: 1rem;
+      display: grid;
+      place-items: center;
+      .img-container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+        position: relative;
+        margin-bottom: 2rem;
+        padding: 2rem 0 0;
+        img {
+          width: 90%;
+          object-fit: contain;
+          border-radius: 0.5rem;
+          border-right: 0.5rem solid $mainGreen;
+          border-bottom: 0.5rem solid $mainGreen;
+        }
+      }
+    }
+    @include breakpoint-up(large) {
+      flex-wrap: nowrap;
+      .col-1 {
+        width: 55%;
+        text-align: left;
+        padding-right: 5rem;
+      }
+      .col-2 {
+        width: 45%;
+        .img-container {
+          width: 80%;
+        }
+      }
+    }
+  }
+
+  .facilities {
+    ul {
+      // background-color: green;
+      list-style-type: disc;
+      padding: 0 3rem;
+    }
+  }
+  .bottom-text {
+    margin: 2rem auto;
+  }
+}
