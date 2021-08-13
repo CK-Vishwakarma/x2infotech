@@ -17,14 +17,14 @@ const Contact = () => {
       </section>
       <section className="hero">
         <div className="img-container">
-          <img src="/images/contact.webp" alt="contact" srcset="" />
+          <img src="/images/contact.webp" alt="contact" />
         </div>
         <h1 className="heading">
           <span>Where</span> to find us ?
         </h1>
         <hr />
         <h2>Main Branch</h2>
-        <p>
+        <div>
           Gayatri Nagar, Gwalior <br /> Madhya Pradesh <br /> 474004
           <br /> <br />
           <h2>Contact-Us</h2>
@@ -32,7 +32,7 @@ const Contact = () => {
           Email: hr@x2infotech.com <br />
           HR Related Concerns: +91 7000026259 <br />
           IT Related Concers: +91 9407269664 <br />
-        </p>
+        </div>
       </section>
       <hr />
       <section className="contact-form" data-aos="fade-up">

@@ -35,7 +35,10 @@ const Main = () => {
           component={SystemMaintenance}
         />
         <Route path="/services/SEO" component={SEO} />
-        <Route path="/services/advertising" component={Advertising} />
+        <Route
+          path="/services/advertising-and-promotion"
+          component={Advertising}
+        />
         <Route path="/services/brochure-design" component={BrochureDesign} />
         <Route path="/services/logo-design" component={LogoDesign} />
         <Route path="/services/video-editing" component={VideoEditing} />

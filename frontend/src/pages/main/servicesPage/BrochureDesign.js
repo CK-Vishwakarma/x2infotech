@@ -1,6 +1,6 @@
 import React from "react";
 
-const WebsiteDesign = () => {
+const BrochureDesign = () => {
   return (
     <div>
       <h1>Website Design </h1>
@@ -8,4 +8,4 @@ const WebsiteDesign = () => {
   );
 };
 
-export default WebsiteDesign;
+export default BrochureDesign;
