@@ -146,6 +146,7 @@
     }
   }
   .burger-container {
+    user-select: none;
     .mobile-menu-btn {
       cursor: pointer;
       & > span {
@@ -177,6 +178,12 @@
   }
 
   .sidebar-menu {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    user-select: none;
     position: absolute;
     top: 7rem;
     left: 0rem;
@@ -185,13 +192,15 @@
     width: 100%;
     background-color: white;
     height: fit-content;
+    max-height: 85vh;
+    overflow-y: scroll;
     z-index: 1000;
     transition: $tran300ms;
     opacity: 0;
     transform: translateX(-100%);
-
+    text-transform: uppercase;
     ul {
-      padding: 1rem 0;
+      padding: 0.5rem 0;
       li {
         display: flex;
         align-items: center;

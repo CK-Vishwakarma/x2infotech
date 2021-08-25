@@ -28,7 +28,11 @@ const SecondaryNav = () => {
         </div>
         <div className="col-1 ">
           <span className="socials">
-            <a href="https://www.facebook.com/X2Infotech" target="_blank">
+            <a
+              href="https://www.facebook.com/X2Infotech"
+              rel="noreferrer"
+              target="_blank"
+            >
               {" "}
               <GrFacebookOption />
             </a>
@@ -37,6 +41,7 @@ const SecondaryNav = () => {
             <a
               href="https://www.aedin.com/in/x2-infotech-032a311b8/"
               target="_blank"
+              rel="noreferrer"
             >
               {" "}
               <GrLinkedinOption />
@@ -44,7 +49,11 @@ const SecondaryNav = () => {
           </span>
 
           <span className="socials">
-            <a href="https://www.instagram.com/x2_infotech/" target="_blank">
+            <a
+              href="https://www.instagram.com/x2_infotech/"
+              target="_blank"
+              rel="noreferrer"
+            >
               {" "}
               <AiOutlineInstagram />
             </a>

@@ -94,7 +94,7 @@ const MainNavbar = () => {
   return (
     <div className="main-navbar container">
       <div className="logo-section">
-        <Link to="/home">
+        <Link to="/home" onClick={closeMenu}>
           <img src="/images/logofull.webp" alt="x2 infotech" />
         </Link>
       </div>

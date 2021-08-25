@@ -498,6 +498,20 @@ input[type="number"] {
   background-color: #fff;
   height: 100vh;
   width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999999;
+  opacity: 1;
+  pointer-events: none;
+  -webkit-transition: opacity 1000ms ease;
+  transition: opacity 1000ms ease;
+}
+
+.loader.finish {
+  opacity: 0;
 }
 
 .loader h1 {
@@ -765,6 +779,13 @@ input[type="number"] {
   opacity: 0.75;
 }
 
+.main-navbar .burger-container {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 .main-navbar .burger-container .mobile-menu-btn {
   cursor: pointer;
 }
@@ -799,6 +820,14 @@ input[type="number"] {
 }
 
 .main-navbar .sidebar-menu {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   position: absolute;
   top: 7rem;
   left: 0rem;
@@ -809,16 +838,23 @@ input[type="number"] {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  max-height: 85vh;
+  overflow-y: scroll;
   z-index: 1000;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
   opacity: 0;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
+  text-transform: uppercase;
+}
+
+.main-navbar .sidebar-menu::-webkit-scrollbar {
+  display: none;
 }
 
 .main-navbar .sidebar-menu ul {
-  padding: 1rem 0;
+  padding: 0.5rem 0;
 }
 
 .main-navbar .sidebar-menu ul li {
@@ -1321,6 +1357,7 @@ input[type="number"] {
 .home .our-services {
   text-align: center;
   padding: 2rem 1rem;
+  overflow: hidden;
 }
 
 .home .our-services .cards-services {
@@ -1420,6 +1457,7 @@ input[type="number"] {
 
 .home .employees {
   text-align: center;
+  overflow: hidden;
   padding: 2rem 0;
 }
 
@@ -1579,6 +1617,7 @@ input[type="number"] {
 }
 
 .home .reviews {
+  overflow: hidden;
   text-align: center;
   margin: 3rem 0;
   margin-bottom: 5rem;
@@ -1611,6 +1650,7 @@ input[type="number"] {
 }
 
 .home .client-carousels {
+  overflow: hidden;
   background-color: #f4f5f7;
   padding: 2rem 0;
 }
