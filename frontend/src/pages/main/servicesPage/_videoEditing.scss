@@ -1,0 +1,26 @@
+.video-editing-page {
+  margin-bottom: 2rem;
+  padding: 0 1.5rem;
+  color: red;
+
+  .heading {
+    margin: 3rem 0;
+    h1 {
+      span {
+        color: $mainGreen;
+      }
+      text-align: center;
+    }
+  }
+
+  p {
+    margin-bottom: 2rem;
+    span {
+      font-weight: 500;
+    }
+  }
+
+  @include breakpoint-up(large) {
+    padding: 0rem;
+  }
+}

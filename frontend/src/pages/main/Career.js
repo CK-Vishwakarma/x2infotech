@@ -39,7 +39,7 @@ const Career = () => {
             autoComplete="off"
             action="https://formsubmit.co/05547deepak@gmail.com"
             method="POST"
-            enctype="multipart/form-data"
+            encType="multipart/form-data"
           >
             <input type="hidden" name="_subject" value="New Resume..." />
 

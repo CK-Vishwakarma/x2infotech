@@ -1,6 +1,29 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 const About = () => {
+  const refClients = useRef(null);
+
+  useEffect(() => {
+    const options = {
+      root: null,
+      threshold: 0,
+      rootMargin: "0px 0px -150px 0px",
+    };
+
+    const observer = new IntersectionObserver(function (entries, observer) {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          for (let i = 0; i <= 23; i++) {
+            setTimeout(() => {
+              entry.target.innerText = i;
+            }, i * 50);
+          }
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+    observer.observe(refClients.current);
+  }, [refClients]);
   return (
     <div className="about-page">
       <section
@@ -73,7 +96,7 @@ const About = () => {
         </section>
       </div>
       <section className="happy-clients container-full">
-        <h1>20</h1>
+        <h1 ref={refClients}>0</h1>
         <h2>Happy Clients</h2>
       </section>
     </div>

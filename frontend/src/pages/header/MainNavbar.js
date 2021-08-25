@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { ImHome } from "react-icons/im";
 import { GrProjects } from "react-icons/gr";
@@ -6,12 +6,71 @@ import { RiCustomerServiceFill } from "react-icons/ri";
 import { FaPhoneAlt } from "react-icons/fa";
 import { GrWorkshop } from "react-icons/gr";
 import { MdPersonPin } from "react-icons/md";
+import { AiFillCaretDown } from "react-icons/ai";
+
+const SubSubMenuComponent = (props) => {
+  const { subSubMenuItem, closeMenu, setSubSubMenuMobileOpen } = props;
+  const closeSubMenuFunc = () => {
+    closeMenu();
+    setSubSubMenuMobileOpen(false);
+  };
+  return subSubMenuItem.map((menuItem, index) => {
+    return (
+      <li key={index}>
+        <Link onClick={closeSubMenuFunc} to={menuItem.link}>
+          {menuItem.title}
+        </Link>
+      </li>
+    );
+  });
+};
+const SubMenuComponent = (props) => {
+  const [subSubMenuMobileOpen, setSubSubMenuMobileOpen] = useState(false);
+
+  const { closeMenu } = props;
+  const subSubMenuMobileFunc = () => {
+    setSubSubMenuMobileOpen(!subSubMenuMobileOpen);
+  };
+  useEffect(() => {
+    setSubSubMenuMobileOpen(false);
+  }, []);
+  return (
+    <>
+      <li onClick={subSubMenuMobileFunc}>
+        {props.subMenuItem}{" "}
+        <span
+          className={
+            subSubMenuMobileOpen ? "dropdown-arrow open" : "dropdown-arrow"
+          }
+        >
+          <AiFillCaretDown />
+        </span>{" "}
+      </li>
+      <div
+        className={
+          subSubMenuMobileOpen
+            ? "sub-sub-menu-mobile open"
+            : "sub-sub-menu-mobile"
+        }
+      >
+        <SubSubMenuComponent
+          setSubSubMenuMobileOpen={setSubSubMenuMobileOpen}
+          closeMenu={closeMenu}
+          subSubMenuItem={props.subSubMenuItem}
+        />
+      </div>
+    </>
+  );
+};
+
 const MainNavbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [subMenuOpen, setSubMenuOpen] = useState(false);
+  const [subMenuMobileOpen, setSubMenuMobileOpen] = useState(false);
 
   const handleMenu = () => {
     setMenuOpen(!menuOpen);
+    setSubMenuMobileOpen(false);
   };
   if (menuOpen) {
     document.body.style.overflow = "hidden";
@@ -20,6 +79,7 @@ const MainNavbar = () => {
   }
   const closeMenu = () => {
     setMenuOpen(false);
+    setSubMenuOpen(false);
   };
   const subMenuOpenFunc = () => {
     setSubMenuOpen(true);
@@ -27,11 +87,14 @@ const MainNavbar = () => {
   const subMenuCloseFunc = () => {
     setSubMenuOpen(false);
   };
+  const subMenuMobileFunc = () => {
+    setSubMenuMobileOpen(!subMenuMobileOpen);
+  };
 
   return (
     <div className="main-navbar container">
       <div className="logo-section">
-        <Link to="/home">
+        <Link to="/home" onClick={closeMenu}>
           <img src="/images/logofull.webp" alt="x2 infotech" />
         </Link>
       </div>
@@ -48,27 +111,41 @@ const MainNavbar = () => {
             </NavLink>
           </li>
           <li onMouseEnter={subMenuOpenFunc} onMouseLeave={subMenuCloseFunc}>
-            <NavLink activeClassName="link-active" to="#">
+            <NavLink to="#">
               services
+              <span className="nav-icon">
+                <AiFillCaretDown />
+              </span>
             </NavLink>
+
             <ul className={subMenuOpen ? "sub-menu open" : "sub-menu"}>
               <li>
                 <Link to="#">Design and Development</Link>
                 <div className="sub-sub-menu">
                   <ul>
                     <li>
-                      <Link to="/services/website-design">Website Design </Link>
+                      <Link to="/services/website-design" onClick={closeMenu}>
+                        Website Design{" "}
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/services/mobile-application">
+                      <Link
+                        to="/services/mobile-application"
+                        onClick={closeMenu}
+                      >
                         Mobile Applications
                       </Link>
                     </li>
                     <li>
-                      <Link to="/services/CMS">CMS</Link>
+                      <Link to="/services/CMS" onClick={closeMenu}>
+                        CMS
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/services/system-maintenance">
+                      <Link
+                        to="/services/system-maintenance"
+                        onClick={closeMenu}
+                      >
                         System Maintenance
                       </Link>
                     </li>
@@ -80,7 +157,9 @@ const MainNavbar = () => {
                 <div className="sub-sub-menu">
                   <ul>
                     <li>
-                      <Link to="/services/SEO">SEO</Link>
+                      <Link to="/services/SEO" onClick={closeMenu}>
+                        SEO
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -90,20 +169,25 @@ const MainNavbar = () => {
                 <div className="sub-sub-menu">
                   <ul>
                     <li>
-                      <Link to="/services/advertising-and-promotion">
+                      <Link
+                        to="/services/advertising-and-promotion"
+                        onClick={closeMenu}
+                      >
                         Advertising & Promotion
                       </Link>
                     </li>
                     <li>
-                      <Link to="/services/brochure-design">
+                      <Link to="/services/brochure-design" onClick={closeMenu}>
                         Brochure Design{" "}
                       </Link>
                     </li>
                     <li>
-                      <Link to="/services/logo-design">Logo Design</Link>
+                      <Link to="/services/logo-design" onClick={closeMenu}>
+                        Logo Design
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/services/video-editing">
+                      <Link to="/services/video-editing" onClick={closeMenu}>
                         Video and Photo Editing
                       </Link>
                     </li>
@@ -165,15 +249,68 @@ const MainNavbar = () => {
               <span>portfolio</span>
             </Link>
           </li>
-          <li>
-            <Link to="/services" onClick={closeMenu}>
+          <li onClick={subMenuMobileFunc}>
+            <Link to="#">
               <span>
                 <RiCustomerServiceFill />
               </span>
-
               <span>services</span>
             </Link>
+            <div
+              className={
+                subMenuMobileOpen ? "dropdown-arrow open" : "dropdown-arrow"
+              }
+            >
+              <AiFillCaretDown />
+            </div>{" "}
           </li>
+          <div
+            className={
+              subMenuMobileOpen ? "subMenuMobile open" : "subMenuMobile"
+            }
+          >
+            <SubMenuComponent
+              closeMenu={closeMenu}
+              subMenuItem={"Design and Development"}
+              subSubMenuItem={[
+                { title: "Website Design", link: "/services/website-design" },
+                {
+                  title: "Mobile Applications",
+                  link: "/services/mobile-application",
+                },
+                { title: "CMS", link: "/services/CMS" },
+                {
+                  title: "System Maintenance",
+                  link: "/services/system-maintenance",
+                },
+              ]}
+            />
+            <SubMenuComponent
+              closeMenu={closeMenu}
+              subMenuItem={"Digital Marketing"}
+              subSubMenuItem={[{ title: "SEO", link: "/services/SEO" }]}
+            />
+            <SubMenuComponent
+              closeMenu={closeMenu}
+              subMenuItem={"Graphic Design"}
+              subSubMenuItem={[
+                {
+                  title: "Advertising & Promotion",
+                  link: "/services/advertising-and-promotion",
+                },
+                {
+                  title: " Brochure Design",
+                  link: "/services/brochure-design",
+                },
+                { title: "Logo Design", link: "/services/logo-design" },
+                {
+                  title: "Video and Photo Editing",
+                  link: "/services/video-editing",
+                },
+              ]}
+            />
+          </div>
+
           <li>
             <Link to="/career" onClick={closeMenu}>
               <span>
