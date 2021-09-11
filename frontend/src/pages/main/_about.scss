@@ -45,7 +45,10 @@
       .col-1 {
         width: 55%;
         text-align: left;
-        padding-right: 5rem;
+        padding: 0 5rem;
+        h1 {
+          margin-bottom: 2rem;
+        }
       }
       .col-2 {
         width: 45%;
@@ -93,7 +96,7 @@
       .col-1 {
         width: 55%;
         text-align: left;
-        padding-left: 5rem;
+        padding: 0 5rem;
         order: 2;
       }
       .col-2 {
@@ -109,6 +112,75 @@
           }
           img {
             width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .employees {
+    text-align: center;
+    overflow: hidden;
+    padding: 2rem 0;
+    h1 {
+      padding: 0 1.5rem;
+    }
+    hr {
+      margin-bottom: 1.5rem;
+    }
+    h2 {
+      text-align: center;
+      padding: 0.5rem 1rem;
+      margin-bottom: 2rem;
+    }
+    .employees-avatar {
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2.5rem;
+      .img-holder {
+        width: 12rem;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          top: -0.2rem;
+          width: 7.5rem;
+          height: 7.5rem;
+          border-radius: 50%;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: $mainGreen;
+          z-index: -1;
+        }
+        img {
+          width: 75%;
+          object-fit: contain;
+        }
+        p {
+          text-align: center;
+          height: 3rem;
+        }
+      }
+    }
+    @include breakpoint-up(large) {
+      padding-top: 5rem;
+      padding-bottom: 3rem;
+      hr {
+        margin-bottom: 1.5rem;
+      }
+      // padding: 3rem 5rem;
+      h2 {
+        max-width: 80rem;
+        margin: 0 auto;
+        margin-bottom: 4rem;
+      }
+      .employees-avatar {
+        gap: 3.5rem;
+        .img-holder {
+          img {
+            width: 80%;
           }
         }
       }

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { Tutors } from "../../data/Data";
 
 const About = () => {
   const refClients = useRef(null);
@@ -7,7 +8,7 @@ const About = () => {
     const options = {
       root: null,
       threshold: 0,
-      rootMargin: "0px 0px -150px 0px",
+      rootMargin: "0px 0px -50px 0px",
     };
 
     const observer = new IntersectionObserver(function (entries, observer) {
@@ -16,7 +17,7 @@ const About = () => {
           for (let i = 0; i <= 23; i++) {
             setTimeout(() => {
               entry.target.innerText = i;
-            }, i * 50);
+            }, i * 70);
           }
           observer.unobserve(entry.target);
         }
@@ -95,9 +96,33 @@ const About = () => {
           </div>
         </section>
       </div>
-      <section className="happy-clients container-full">
-        <h1 ref={refClients}>0</h1>
-        <h2>Happy Clients</h2>
+      <section className="employees container">
+        <h1 data-aos="fade-down">Our Best Professionals</h1>
+        <hr />
+        <h2>
+          Showcase some of your highest rated tutors, top students or members of
+          staff here. Images are automatically scaled to fit it displays well.
+        </h2>
+        <div className="employees-avatar" data-aos="fade-up">
+          {Tutors.map((tutor) => {
+            return (
+              <div className="img-holder" key={tutor._id}>
+                <img
+                  src={tutor.tutorImage}
+                  alt="tutors.svg"
+                  data-aos="flip-right"
+                />
+                <p>{tutor.fullName}</p>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+      <section className="container-full">
+        <section className="happy-clients ">
+          <h1 ref={refClients}>0</h1>
+          <h2>Happy Clients</h2>
+        </section>
       </section>
     </div>
   );

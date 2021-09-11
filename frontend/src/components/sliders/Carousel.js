@@ -14,12 +14,19 @@ const Carousel = () => {
         spaceBetween={0}
         centeredSlides={true}
         autoplay={{
-          delay: 2000,
+          delay: 3500,
           disableOnInteraction: false,
         }}
         pagination={{
           clickable: true,
         }}
+        // breakpoints={{
+        //   1024: {
+        //     pagination: {
+        //       clickable: false,
+        //     },
+        //   },
+        // }}
         className="mySwiper"
       >
         {CarouselSlides.map((slides, SlideIndex) => {

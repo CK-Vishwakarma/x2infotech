@@ -1,6 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
+  "homepage": "http://jobsforyou.tech/",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.4",
