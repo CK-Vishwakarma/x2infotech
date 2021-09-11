@@ -1,11 +1,10 @@
 import React from "react";
-import { Tutors } from "../../data/Data";
 import { FaRupeeSign } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { GiMoneyStack } from "react-icons/gi";
 import { RiTimerLine } from "react-icons/ri";
-
+import { Link } from "react-router-dom";
 // import { FaRegStar } from "react-icons/fa";
 import Carousel from "../../components/sliders/Carousel";
 import ReviewSlider from "../../components/sliders/ReviewsSlider";
@@ -96,50 +95,49 @@ const Home = () => {
           <hr />
           <p>We provide services in different fields</p>
           <div className="cards-services">
-            <div className="card">
-              <h1>System Management</h1>
+            <div className="card webd">
+              <h1>
+                <Link to="/services/website-design">
+                  website Design and Development
+                </Link>
+              </h1>
             </div>
-            <div className="card">
-              <h1>website Design and Development</h1>
+
+            <div className="card mobd">
+              <h1>
+                <Link to="/services/mobile-application">
+                  Mobile App Design and Development
+                </Link>
+              </h1>
             </div>
-            <div className="card">
-              <h1>Mobile App Design and Development</h1>
+
+            <div className="card gd">
+              <h1>
+                <Link to="/services/logo-design">Graphic Design</Link>
+              </h1>
             </div>
-            <div className="card">
-              <h1>Graphic Design</h1>
+            <div className="card seodiv">
+              <h1>
+                <Link to="/services/SEO">SEO</Link>
+              </h1>
             </div>
-            <div className="card">
-              <h1>SEO</h1>
+            <div className="card cmsdiv">
+              <h1>
+                <Link to="/services/CMS">CMS</Link>
+              </h1>
             </div>
-            <div className="card">
-              <h1>CMS</h1>
+            <div className="card aidiv">
+              <h1>
+                {/* <Link to="/services/website-design"> */}
+                Artificial Intelligence
+                {/* </Link> */}
+              </h1>
             </div>
           </div>
         </div>
       </div>
       {/* =================================================== */}
-      <section className="employees container">
-        <h1 data-aos="fade-down">Our Best Professionals</h1>
-        <hr />
-        <p>
-          Showcase some of your highest rated tutors, top students or members of
-          staff here. Images are automatically scaled to fit it displays well.
-        </p>
-        <div className="employees-avatar" data-aos="fade-up">
-          {Tutors.map((tutor) => {
-            return (
-              <div className="img-holder" key={tutor._id}>
-                <img
-                  src={tutor.tutorImage}
-                  alt="tutors.svg"
-                  data-aos="flip-right"
-                />
-                <p>{tutor.fullName}</p>
-              </div>
-            );
-          })}
-        </div>
-      </section>
+
       {/* =================================================== */}
       <section
         style={{ backgroundImage: "url(images/backg2.webp)" }}

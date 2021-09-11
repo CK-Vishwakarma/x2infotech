@@ -1071,10 +1071,10 @@ input[type="number"] {
 }
 
 .swiper-slide img {
-  padding: 2rem;
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+  padding: 2rem;
 }
 
 .review-page {
@@ -1210,7 +1210,6 @@ input[type="number"] {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    max-height: 70rem;
   }
   .home .hero-section .col-1 {
     width: 50%;
@@ -1360,6 +1359,10 @@ input[type="number"] {
   overflow: hidden;
 }
 
+.home .our-services hr {
+  margin-bottom: 1rem;
+}
+
 .home .our-services .cards-services {
   margin: 2rem 0;
   display: -webkit-box;
@@ -1372,12 +1375,19 @@ input[type="number"] {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 2rem 0;
 }
 
 .home .our-services .cards-services .card {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 120px;
   cursor: pointer;
-  background-color: lightgreen;
   padding: 1rem 0;
   border-radius: 1rem;
   text-transform: capitalize;
@@ -1387,6 +1397,15 @@ input[type="number"] {
   transition: all 200ms ease;
 }
 
+.home .our-services .cards-services .card h1 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.home .our-services .cards-services .card h1 a:active {
+  color: inherit;
+}
+
 .home .our-services .cards-services .card:hover {
   -webkit-box-shadow: 0 0 0.3rem black;
           box-shadow: 0 0 0.3rem black;
@@ -1394,9 +1413,130 @@ input[type="number"] {
 }
 
 .home .our-services .cards-services .card h1 {
-  font-size: 1.7rem;
-  font-weight: 400;
+  font-size: 2.2rem;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+  font-weight: 600;
   margin: 0;
+}
+
+.home .our-services .cards-services .webd {
+  position: relative;
+}
+
+.home .our-services .cards-services .webd::before {
+  content: "";
+  background-image: url(./backGroundImgs/graphicdesign.webp);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 1rem;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.home .our-services .cards-services .mobd {
+  position: relative;
+}
+
+.home .our-services .cards-services .mobd::before {
+  content: "";
+  background-image: url(./backGroundImgs/mobile-app.webp);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 1rem;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.home .our-services .cards-services .aidiv {
+  position: relative;
+}
+
+.home .our-services .cards-services .aidiv::before {
+  content: "";
+  background-image: url(./backGroundImgs/ai.webp);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 1rem;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.home .our-services .cards-services .gd {
+  position: relative;
+}
+
+.home .our-services .cards-services .gd::before {
+  content: "";
+  background-image: url(./backGroundImgs/system.webp);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 1rem;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.home .our-services .cards-services .seodiv {
+  position: relative;
+}
+
+.home .our-services .cards-services .seodiv::before {
+  content: "";
+  background-image: url(./backGroundImgs/seo.webp);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 1rem;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.home .our-services .cards-services .cmsdiv {
+  position: relative;
+}
+
+.home .our-services .cards-services .cmsdiv::before {
+  content: "";
+  background-image: url(./backGroundImgs/crm.webp);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 1rem;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 @media (min-width: 768px) {
@@ -1451,83 +1591,7 @@ input[type="number"] {
   .home .our-services .cards-services .card {
     -ms-flex-preferred-size: 30%;
         flex-basis: 30%;
-    height: 10rem;
-  }
-}
-
-.home .employees {
-  text-align: center;
-  overflow: hidden;
-  padding: 2rem 0;
-}
-
-.home .employees h1 {
-  padding: 0 1.5rem;
-}
-
-.home .employees hr {
-  margin-bottom: 3rem;
-}
-
-.home .employees p {
-  text-align: center;
-  padding: 0.5rem 1rem;
-  margin-bottom: 2rem;
-}
-
-.home .employees .employees-avatar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 2rem 0;
-}
-
-.home .employees .employees-avatar .img-holder {
-  width: 10rem;
-  position: relative;
-}
-
-.home .employees .employees-avatar .img-holder::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 7rem;
-  height: 7rem;
-  border-radius: 50%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  background-color: #55be65;
-  z-index: -1;
-}
-
-.home .employees .employees-avatar .img-holder img {
-  width: 80%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-.home .employees .employees-avatar .img-holder p {
-  text-align: center;
-  height: 3rem;
-}
-
-@media (min-width: 1024px) {
-  .home .employees p {
-    max-width: 60rem;
-    margin: 0 auto;
-    margin-bottom: 3rem;
-  }
-  .home .employees .employees-avatar {
-    gap: 5rem;
+    height: 12rem;
   }
 }
 
@@ -2344,7 +2408,10 @@ input[type="number"] {
   .about-page .hero .col-1 {
     width: 55%;
     text-align: left;
-    padding-right: 5rem;
+    padding: 0 5rem;
+  }
+  .about-page .hero .col-1 h1 {
+    margin-bottom: 2rem;
   }
   .about-page .hero .col-2 {
     width: 45%;
@@ -2410,7 +2477,7 @@ input[type="number"] {
   .about-page .objective .col-1 {
     width: 55%;
     text-align: left;
-    padding-left: 5rem;
+    padding: 0 5rem;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
@@ -2431,6 +2498,93 @@ input[type="number"] {
   }
   .about-page .objective .col-2 .img-container img {
     width: 100%;
+  }
+}
+
+.about-page .employees {
+  text-align: center;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+.about-page .employees h1 {
+  padding: 0 1.5rem;
+}
+
+.about-page .employees hr {
+  margin-bottom: 1.5rem;
+}
+
+.about-page .employees h2 {
+  text-align: center;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.about-page .employees .employees-avatar {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2.5rem;
+}
+
+.about-page .employees .employees-avatar .img-holder {
+  width: 12rem;
+  position: relative;
+}
+
+.about-page .employees .employees-avatar .img-holder::before {
+  content: "";
+  position: absolute;
+  top: -0.2rem;
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #55be65;
+  z-index: -1;
+}
+
+.about-page .employees .employees-avatar .img-holder img {
+  width: 75%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.about-page .employees .employees-avatar .img-holder p {
+  text-align: center;
+  height: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .about-page .employees {
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+  }
+  .about-page .employees hr {
+    margin-bottom: 1.5rem;
+  }
+  .about-page .employees h2 {
+    max-width: 80rem;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+  }
+  .about-page .employees .employees-avatar {
+    gap: 3.5rem;
+  }
+  .about-page .employees .employees-avatar .img-holder img {
+    width: 80%;
   }
 }
 
