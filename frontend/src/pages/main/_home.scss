@@ -32,14 +32,13 @@
         font-size: 1.6rem;
       }
     }
-    @include breakpoint-up(medium) {
-    }
+
     @include breakpoint-up(large) {
       width: 100%;
 
       flex-direction: row;
       align-items: center;
-      max-height: 70rem;
+      // max-height: 50rem;
       .col-1 {
         width: 50%;
         height: 100%;
@@ -159,16 +158,33 @@
     text-align: center;
     padding: 2rem 1rem;
     overflow: hidden;
+    hr {
+      margin-bottom: 1rem;
+    }
 
     .cards-services {
       margin: 2rem 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
       gap: 2rem 0;
       .card {
+        h1 {
+          a {
+            color: inherit;
+            text-decoration: none;
+            &:active {
+              color: inherit;
+            }
+          }
+        }
+        display: grid;
+        place-items: center;
+        width: 100%;
+        height: 120px;
         cursor: pointer;
-        background-color: lightgreen;
+        // background-color: lightgreen;
         // background-color: white;
         padding: 1rem 0;
         border-radius: 1rem;
@@ -180,9 +196,127 @@
           background-color: rgba(144, 238, 144, 0.5);
         }
         h1 {
-          font-size: 1.7rem;
-          font-weight: 400;
+          font-size: 2.2rem;
+          text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+
+          font-weight: 600;
           margin: 0;
+        }
+      }
+
+      .webd {
+        position: relative;
+        &::before {
+          content: "";
+          background-image: url(./backGroundImgs/graphicdesign.webp);
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+
+          border-radius: 1rem;
+          opacity: $backGroundOpacity;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          position: absolute;
+          z-index: -1;
+        }
+      }
+      .mobd {
+        position: relative;
+        &::before {
+          content: "";
+          background-image: url(./backGroundImgs/mobile-app.webp);
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+
+          border-radius: 1rem;
+          opacity: $backGroundOpacity;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          position: absolute;
+          z-index: -1;
+        }
+      }
+
+      .aidiv {
+        position: relative;
+        &::before {
+          content: "";
+          background-image: url(./backGroundImgs/ai.webp);
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+
+          border-radius: 1rem;
+          opacity: $backGroundOpacity;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          position: absolute;
+          z-index: -1;
+        }
+      }
+      .gd {
+        position: relative;
+        &::before {
+          content: "";
+          background-image: url(./backGroundImgs/system.webp);
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+
+          border-radius: 1rem;
+          opacity: $backGroundOpacity;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          position: absolute;
+          z-index: -1;
+        }
+      }
+      .seodiv {
+        position: relative;
+        &::before {
+          content: "";
+          background-image: url(./backGroundImgs/seo.webp);
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+
+          border-radius: 1rem;
+          opacity: $backGroundOpacity;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          position: absolute;
+          z-index: -1;
+        }
+      }
+      .cmsdiv {
+        position: relative;
+        &::before {
+          content: "";
+          background-image: url(./backGroundImgs/crm.webp);
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+
+          border-radius: 1rem;
+          opacity: $backGroundOpacity;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          position: absolute;
+          z-index: -1;
         }
       }
     }
@@ -224,67 +358,8 @@
       .cards-services {
         .card {
           flex-basis: 30%;
-          height: 10rem;
+          height: 12rem;
         }
-      }
-    }
-  }
-
-  .employees {
-    text-align: center;
-    overflow: hidden;
-    padding: 2rem 0;
-    h1 {
-      padding: 0 1.5rem;
-    }
-    hr {
-      margin-bottom: 3rem;
-    }
-    p {
-      text-align: center;
-      padding: 0.5rem 1rem;
-      margin-bottom: 2rem;
-    }
-    .employees-avatar {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 2rem 0;
-      .img-holder {
-        width: 10rem;
-        position: relative;
-        &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          width: 7rem;
-          height: 7rem;
-          border-radius: 50%;
-          left: 50%;
-          transform: translateX(-50%);
-          background-color: $mainGreen;
-          z-index: -1;
-        }
-        img {
-          width: 80%;
-          object-fit: contain;
-        }
-        p {
-          text-align: center;
-          height: 3rem;
-        }
-      }
-    }
-    @include breakpoint-up(large) {
-      // padding: 3rem 5rem;
-      p {
-        max-width: 60rem;
-        margin: 0 auto;
-        margin-bottom: 3rem;
-      }
-      .employees-avatar {
-        gap: 5rem;
       }
     }
   }
