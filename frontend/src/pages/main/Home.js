@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import Carousel from "../../components/sliders/Carousel";
 import ReviewSlider from "../../components/sliders/ReviewsSlider";
 import ClientSlider from "../../components/sliders/ClientSlider";
+import PricingCard from "../../components/pricingCard/PricingCard";
 
 const Home = () => {
   return (
@@ -143,80 +144,7 @@ const Home = () => {
         style={{ backgroundImage: "url(images/backg2.webp)" }}
         className="pricing container-full"
       >
-        <div className="container">
-          <div className="pricing-heading">
-            <h1>Pricing</h1>
-            <hr />
-            <p>
-              Offer multiple packages or monthly subscriptions? Why not showcase
-              your featured price plans here, bold and beautifully.
-            </p>
-          </div>
-          <div className="pricing-cards">
-            <div className="single-card" data-aos="flip-left">
-              <h2>Basic</h2>
-              <h1>
-                <span>
-                  <FaRupeeSign />
-                </span>
-                1000
-              </h1>
-              <p className="monthly">monthly</p>
-              <p className="card-desc">
-                Unlimited Subjects Course Management Progress Statistics
-              </p>
-              <p className="card-striked-text">
-                <s>Exportable Data</s>
-              </p>
-              <button className="btn">
-                <span>
-                  <FaApple />
-                </span>
-                Register
-              </button>
-            </div>
-            <div className="single-card active" data-aos="zoom-in-up">
-              <h2>Basic</h2>
-              <h1>
-                <span>
-                  <FaRupeeSign />
-                </span>
-                1000
-              </h1>
-              <p className="monthly">monthly</p>
-              <p className="card-desc">
-                Unlimited Subjects Course Management Progress Statistics
-              </p>
-              <p className="card-striked-text">Exportable Data</p>
-              <button className="btn">
-                <span>
-                  <FaApple />
-                </span>
-                Register
-              </button>
-            </div>
-            <div className="single-card" data-aos="flip-right">
-              <h2>Basic</h2>
-              <h1>
-                <span>
-                  <FaRupeeSign />
-                </span>
-                1000
-              </h1>
-              <p className="monthly">monthly</p>
-              <p className="card-desc">
-                Unlimited Subjects Course Management Progress Statistics
-              </p>
-              <p className="card-striked-text">Exportable Data</p>
-              <button className="btn">
-                <span>
-                  <FaApple />
-                </span>
-                Register
-              </button>
-            </div>
-          </div>
-        </div>
+        <PricingCard/>
       </section>
       {/* =================================================== */}
       <div className="reviews">

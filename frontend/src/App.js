@@ -6,7 +6,6 @@ import SecondaryNav from "./pages/header/SecondaryNav";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Loading from "./components/Loading";
-// import { FaArrowAltCircleUp } from "react-icons/fa";
 
 const App = () => {
   useEffect(() => {
