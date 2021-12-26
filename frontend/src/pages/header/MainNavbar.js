@@ -194,9 +194,14 @@ const MainNavbar = () => {
                   </ul>
                 </div>
               </li>
+              <li> 
+              <Link to="/calculator">Calculator</Link>
+              </li>
             </ul>
+            
           </li>
           <li>
+            
             <NavLink activeClassName="link-active" to="/career">
               career
             </NavLink>

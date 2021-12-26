@@ -72,11 +72,11 @@ export const Tutors = [
     tutorImage: "/images/tutors/tutor3.svg",
     review:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quisquam rem sunt, fugit esse provident in expedita aut facere. Id modi fugiat rem magnam hic facere, dolorum aspernatur eos adipisci!",
-    rating: 5,
+    rating: 1,
   },
   {
     _id: 4,
-    fullName: "Popat Lal",
+    fullName: "Amit Sharma",
     tutorImage: "/images/tutors/tutor4.svg",
     review:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quisquam rem sunt, fugit esse provident in expedita aut facere. Id modi fugiat rem magnam hic facere, dolorum aspernatur eos adipisci!",

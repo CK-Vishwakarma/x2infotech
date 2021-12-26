@@ -13,8 +13,8 @@ const SecondaryNav = () => {
             <span>
               <IoCallSharp />
             </span>
-            <a className="call-action-link" href="tel:+917999319552">
-              Call us: +91 7999319552
+            <a className="call-action-link" href="tel:+919407269664">
+              Call us: +91 9407269664
             </a>
           </p>
           <p>
