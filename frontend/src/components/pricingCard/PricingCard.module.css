@@ -1,0 +1,28 @@
+.cardServiceName {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  /* padding: .7rem; */
+  margin-bottom: 0.5rem;
+  /* background-color: brown; */
+}
+.icon {
+  font-size: 1.5rem;
+  /* line-height: 3rem; */
+  display: flex;
+  align-items: center;
+
+}
+.key {
+  font-size: 1.5rem;
+  /* line-height: 3rem; */
+  font-weight: 500;
+}
+.btnExt {
+  margin: 0.7rem;
+  width: 20rem;
+}
+.btnContainer {
+  margin-bottom: 3rem;
+}
